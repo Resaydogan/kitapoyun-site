@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1440">
+<meta name="robots" content="noindex, nofollow">
+<title>kitapoyun · Mektup kutusu</title>
+<link rel="icon" href="assets/hediye.png">
+<style>
+body{margin:0;background:#FFFFFF;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#4F4F4F}
+a{color:#137A70}a:hover{color:#1F1F1F}
+input,textarea,button{font:inherit}
+</style>
+<style>#app{display:flex;justify-content:center}</style>
+</head>
+<body>
+<div style="position:sticky;top:0;z-index:50;background:#1F1F1F;color:#FFFFFF;font:700 15px/1.4 system-ui,-apple-system,'Segoe UI',sans-serif;text-align:center;padding:10px 16px">Bu, kitapoyun’un tanıtım ve test sürümüdür. Satış, ödeme ve üyelik henüz açık değil; formlara yazdıkların hiçbir yere gönderilmez.</div>
+<div id="app"></div>
+<template id="dc-template">
+
+<div style="width: 1440px; height: 1500px; display: grid; grid-template-columns: 280px minmax(0, 1fr); background: #FFF4D6; font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; color: #4F4F4F">
+<aside style="background: #FFFFFF; border-right: 2px solid #F0E9D8; padding: 32px 24px; display: flex; flex-direction: column; gap: 32px">
+<a href="index.html" aria-label="kitapoyun ana sayfa" style="display: flex"><img src="assets/logo.png" alt="kitapoyun" style="width: 180px; height: auto"></a>
+<nav aria-label="Panel" style="display: flex; flex-direction: column; gap: 6px; font-size: 16px; font-weight: 800">
+<a href="panel.html" style="padding: 14px 16px; border-radius: 14px; color: #4F4F4F; text-decoration: none">Genel bakış</a>
+<a href="panel.html" style="padding: 14px 16px; border-radius: 14px; color: #4F4F4F; text-decoration: none">Kâşif haritam</a>
+<a href="mektup.html" style="padding: 14px 16px; border-radius: 14px; background: #FFC43D; color: #1F1F1F; text-decoration: none; border: 2px solid #1F1F1F">Mektup kutusu</a>
+<a href="panel.html" style="padding: 14px 16px; border-radius: 14px; color: #4F4F4F; text-decoration: none">Kutularım</a>
+<a href="panel.html" style="padding: 14px 16px; border-radius: 14px; color: #4F4F4F; text-decoration: none">Abonelik</a>
+<a href="panel.html" style="padding: 14px 16px; border-radius: 14px; color: #4F4F4F; text-decoration: none">Hesap ve adres</a>
+</nav>
+<div style="padding: 18px; border-radius: 16px; background: #E8F6F4; font-size: 14px; line-height: 1.5; color: #1F1F1F"><strong>Velilere:</strong> Gelen ve giden her mektubu bu sayfada görebilirsiniz. Mektuplar arkadaşa iletilmeden önce Kitapoyun ekibi tarafından okunur.</div>
+<div style="margin-top: auto; display: flex; flex-direction: column; gap: 12px; font-size: 15px">
+<a href="sss.html" style="font-weight: 800">Yardım ve SSS</a>
+<a href="index.html" style="font-weight: 800; color: #4F4F4F">Çıkış yap</a>
+</div>
+</aside>
+
+<main style="padding: 48px 56px; display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<div style="font-size: 15px; font-weight: 900; letter-spacing: 2px; color: #137A70">MEKTUP ARKADAŞIM</div>
+<h1 style="margin: 0; font-size: 48px; font-weight: 900; color: #1F1F1F">Mektup kutusu</h1>
+</div>
+<div style="padding: 14px 20px; border-radius: 16px; background: #FFFFFF; border: 2px solid #1F1F1F; display: flex; gap: 14px; align-items: center">
+<span style="font-size: 14px; font-weight: 800">Senin kâşif numaran</span>
+<span style="font-size: 26px; font-weight: 900; color: #1F1F1F; letter-spacing: 1px">KP-6-0427</span>
+</div>
+</div>
+
+<div role="tablist" aria-label="Mektup kutusu" style="display: flex; gap: 8px; padding: 6px; border-radius: 20px; background: #FFFFFF; border: 2px solid #F0E9D8; align-self: flex-start">
+<button type="button" role="tab" aria-selected="{{inSel}}" onClick="{{toInbox}}" style="{{inTab}}">Gelen mektuplar (1)</button>
+<button type="button" role="tab" aria-selected="{{wrSel}}" onClick="{{toWrite}}" style="{{wrTab}}">Mektup yaz</button>
+</div>
+
+<sc-if value="{{isInbox}}" hint-placeholder-val="{{ false }}">
+<div style="display: grid; grid-template-columns: 360px minmax(0, 1fr); gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<div style="padding: 20px; border-radius: 20px; background: #FFFFFF; border: 3px solid #1F1F1F; display: flex; flex-direction: column; gap: 6px">
+<div style="display: flex; justify-content: space-between; font-size: 14px; font-weight: 800"><span>Deniz · KP-6-1183</span><span>[TARİH]</span></div>
+<div style="font-size: 18px; font-weight: 900; color: #1F1F1F">Medi neden kızgındı?</div>
+<div style="font-size: 14px">Merhaba! Ben de Robotlar da Çorap Giyer'i okudum…</div>
+</div>
+<div style="padding: 20px; border-radius: 20px; background: #FFFFFF; border: 2px solid #F0E9D8; display: flex; flex-direction: column; gap: 6px">
+<div style="font-size: 14px; font-weight: 800">Mektup arkadaşların</div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 16px"><strong style="color: #1F1F1F">Deniz</strong><span>KP-6-1183 · [AY] kutusu</span></div>
+<div style="font-size: 13px; line-height: 1.45; margin-top: 6px">Yeni arkadaş numaraları her ay kutundaki kartvizitle gelir.</div>
+</div>
+</div>
+<article style="padding: 40px; border-radius: 24px; background: #FFFFFF; border: 2px solid #1F1F1F; display: flex; flex-direction: column; gap: 20px">
+<div style="display: grid; grid-template-columns: 120px minmax(0, 1fr); row-gap: 10px; font-size: 16px; padding-bottom: 20px; border-bottom: 2px dashed #F0E9D8">
+<span style="font-weight: 800">Gönderen</span><span style="color: #1F1F1F; font-weight: 800">Deniz · KP-6-1183</span>
+<span style="font-weight: 800">Konu</span><span style="color: #1F1F1F; font-weight: 800">Medi neden kızgındı?</span>
+</div>
+<p style="margin: 0; font-size: 20px; line-height: 1.7; color: #1F1F1F">Merhaba! Ben de Robotlar da Çorap Giyer'i okudum. En çok Bubu'yu sevdim çünkü hep şaşırıyor, ben de onun gibi yaptım. Medi'nin çorabını bulmak bana çok zor geldi. Sen hangi robotu sevdin? Dev robotu açınca ne yaptın?</p>
+<p style="margin: 0; font-size: 20px; color: #1F1F1F">Görüşürüz! Deniz</p>
+<div style="margin-top: auto; display: flex; justify-content: space-between; align-items: center; padding-top: 20px; border-top: 2px solid #F0E9D8">
+<sc-if value="{{notReported}}" hint-placeholder-val="{{ true }}"><button type="button" onClick="{{report}}" style="height: 48px; padding: 0 20px; border-radius: 14px; border: 2px solid #4F4F4F; background: #FFFFFF; color: #4F4F4F; font-weight: 800; cursor: pointer">Bu mektupta bir sorun var, bildir</button></sc-if>
+<sc-if value="{{reported}}" hint-placeholder-val="{{ false }}"><span style="font-size: 15px; font-weight: 800; color: #1F1F1F">Teşekkürler, ekibimiz inceleyecek. Bu arkadaşlıktan yeni mektup gelmeyecek.</span></sc-if>
+<button type="button" onClick="{{reply}}" style="height: 56px; padding: 0 28px; border-radius: 16px; border: 2px solid #1F1F1F; background: #FFC43D; color: #1F1F1F; font-size: 17px; font-weight: 900; cursor: pointer">Cevap yaz</button>
+</div>
+</article>
+</div>
+</sc-if>
+
+<sc-if value="{{isCompose}}" hint-placeholder-val="{{ true }}">
+<div style="display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 24px; align-items: start">
+<form style="padding: 40px; border-radius: 24px; background: #FFFFFF; border: 2px solid #1F1F1F; display: flex; flex-direction: column; gap: 20px">
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
+<label style="display: flex; flex-direction: column; gap: 8px; font-weight: 800; color: #1F1F1F">Gönderen (sen)<input type="text" value="KP-6-0427" readonly style="height: 56px; padding: 0 16px; border-radius: 12px; border: 2px solid #E0D8C6; background: #FFF4D6; font-size: 18px; font-weight: 800; color: #1F1F1F"></label>
+<label style="display: flex; flex-direction: column; gap: 8px; font-weight: 800; color: #1F1F1F">Kime (kartvizitteki numara)<input type="text" value="{{to}}" onChange="{{setTo}}" placeholder="KP-6-…" style="height: 56px; padding: 0 16px; border-radius: 12px; border: 2px solid #4F4F4F; font-size: 18px; font-weight: 800; color: #1F1F1F; text-transform: uppercase"></label>
+</div>
+<sc-if value="{{toOk}}" hint-placeholder-val="{{ true }}"><div style="margin-top: -8px; font-size: 15px; font-weight: 800; color: #137A70">Mektup arkadaşın: Deniz</div></sc-if>
+<sc-if value="{{toBad}}" hint-placeholder-val="{{ false }}"><div style="margin-top: -8px; font-size: 15px; font-weight: 800; color: #1F1F1F">Bu numara senin mektup arkadaşların arasında yok. Kutundaki kartvizitteki numarayı yaz.</div></sc-if>
+<label style="display: flex; flex-direction: column; gap: 8px; font-weight: 800; color: #1F1F1F">Konu<input type="text" value="{{subject}}" onChange="{{setSubject}}" placeholder="Mektubunun konusu" maxlength="60" style="height: 56px; padding: 0 16px; border-radius: 12px; border: 2px solid #4F4F4F; font-size: 18px; color: #1F1F1F"></label>
+<label style="display: flex; flex-direction: column; gap: 8px; font-weight: 800; color: #1F1F1F">Mektubun<textarea value="{{body}}" onChange="{{setBody}}" rows="9" maxlength="600" placeholder="Bu ayın kitaplarında en çok neyi sevdin? Arkadaşına bir soru sor!" style="padding: 16px; border-radius: 12px; border: 2px solid #4F4F4F; font-size: 19px; line-height: 1.6; color: #1F1F1F; resize: none"></textarea></label>
+<div style="display: flex; justify-content: space-between; font-size: 14px; font-weight: 700"><span>Adını yazabilirsin, ama soyadını yazma.</span><span>{{count}} / 600</span></div>
+<sc-if value="{{hasPersonal}}" hint-placeholder-val="{{ false }}">
+<div role="alert" style="padding: 18px 20px; border-radius: 16px; background: #FFF4D6; border: 2px solid #1F1F1F; font-size: 16px; line-height: 1.5; color: #1F1F1F"><strong>Bir dakika!</strong> Mektubunda telefon, adres, okul ya da internet hesabı gibi bir bilgi var gibi görünüyor. Bunları mektup arkadaşınla paylaşmıyoruz. Lütfen o kısmı sil.</div>
+</sc-if>
+<div style="display: flex; justify-content: flex-end">
+<button type="button" onClick="{{askCode}}" disabled="{{cantSend}}" style="{{sendStyle}}">Velime onay kodu gönder</button>
+</div>
+</form>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div style="padding: 24px; border-radius: 20px; background: #FFFFFF; border: 2px solid #1F1F1F; display: flex; flex-direction: column; gap: 12px">
+<div style="font-size: 18px; font-weight: 900; color: #1F1F1F">Mektup nasıl gider?</div>
+<div style="display: flex; gap: 12px; font-size: 15px; line-height: 1.45"><span style="width: 28px; height: 28px; flex-shrink: 0; border-radius: 14px; background: #1FA89B; border: 2px solid #1F1F1F; display: flex; align-items: center; justify-content: center; font-weight: 900; color: #1F1F1F">1</span>Mektubunu yaz.</div>
+<div style="display: flex; gap: 12px; font-size: 15px; line-height: 1.45"><span style="width: 28px; height: 28px; flex-shrink: 0; border-radius: 14px; background: #1FA89B; border: 2px solid #1F1F1F; display: flex; align-items: center; justify-content: center; font-weight: 900; color: #1F1F1F">2</span>Velinin telefonuna gelen kodu birlikte yazın.</div>
+<div style="display: flex; gap: 12px; font-size: 15px; line-height: 1.45"><span style="width: 28px; height: 28px; flex-shrink: 0; border-radius: 14px; background: #1FA89B; border: 2px solid #1F1F1F; display: flex; align-items: center; justify-content: center; font-weight: 900; color: #1F1F1F">3</span>Kitapoyun ekibi mektubu okur ve arkadaşına iletir.</div>
+</div>
+<div style="padding: 24px; border-radius: 20px; background: #E8F6F4; display: flex; flex-direction: column; gap: 10px">
+<div style="font-size: 18px; font-weight: 900; color: #1F1F1F">Mektupta neler yazmayız?</div>
+<div style="font-size: 15px; line-height: 1.6; color: #1F1F1F">Soyadımızı, adresimizi, okulumuzu, telefon numaramızı ve internet hesaplarımızı. Fotoğraf da göndermiyoruz.</div>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isOtp}}" hint-placeholder-val="{{ false }}">
+<div style="max-width: 640px; padding: 48px; border-radius: 24px; background: #FFFFFF; border: 2px solid #1F1F1F; display: flex; flex-direction: column; gap: 22px">
+<div style="width: 72px; height: 72px; border-radius: 36px; background: #FFC43D; border: 2px solid #1F1F1F; display: flex; align-items: center; justify-content: center">
+<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#1F1F1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"></rect><path d="M11 18h2"></path></svg>
+</div>
+<h2 style="margin: 0; font-size: 36px; font-weight: 900; color: #1F1F1F">Velinin onayı gerekiyor</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.55">Velinin kayıtlı telefonuna (05** *** ** 42) 6 haneli bir kod gönderdik. Mesajda mektubun konusu ve kime gittiği de yazıyor. Kodu birlikte yazın.</p>
+<label style="display: flex; flex-direction: column; gap: 8px; font-weight: 800; color: #1F1F1F">Onay kodu<input type="text" inputmode="numeric" maxlength="6" value="{{code}}" onChange="{{setCode}}" placeholder="••••••" style="height: 64px; padding: 0 20px; border-radius: 14px; border: 2px solid #4F4F4F; font-size: 30px; font-weight: 900; letter-spacing: 10px; color: #1F1F1F"></label>
+<sc-if value="{{codeWrong}}" hint-placeholder-val="{{ false }}"><div role="alert" style="font-size: 15px; font-weight: 800; color: #1F1F1F">Kod yanlış görünüyor, tekrar dener misin?</div></sc-if>
+<div style="padding: 14px 18px; border-radius: 12px; background: #FFF4D6; border: 2px dashed #4F4F4F; font-size: 14px; font-weight: 700">Test sitesi: SMS gönderilmez, kod 482913.</div>
+<div style="display: flex; justify-content: space-between; align-items: center">
+<button type="button" onClick="{{backToCompose}}" style="height: 52px; padding: 0 22px; border-radius: 14px; border: 2px solid #4F4F4F; background: #FFFFFF; color: #4F4F4F; font-weight: 800; cursor: pointer">Mektuba dön</button>
+<button type="button" onClick="{{confirm}}" style="height: 56px; padding: 0 28px; border-radius: 16px; border: 2px solid #1F1F1F; background: #1FA89B; color: #1F1F1F; font-size: 17px; font-weight: 900; cursor: pointer">Onayla ve gönder</button>
+</div>
+<div style="font-size: 14px">Kod gelmedi mi? <a href="mektup.html" style="font-weight: 800">Yeniden gönder</a> · Kod 5 dakika geçerlidir.</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isSent}}" hint-placeholder-val="{{ false }}">
+<div style="max-width: 720px; padding: 48px; border-radius: 24px; background: #FFFFFF; border: 2px solid #1F1F1F; display: flex; flex-direction: column; gap: 20px; align-items: flex-start">
+<img src="assets/hediye.png" alt="" style="width: 120px; height: auto">
+<h2 style="margin: 0; font-size: 40px; font-weight: 900; color: #1F1F1F">Mektubun yola çıktı!</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.6">Velin onayladı. Kitapoyun ekibi mektubunu okuyacak ve en geç 1 gün içinde Deniz'in mektup kutusuna bırakacak. Deniz cevap yazınca velinin e-postasına haber vereceğiz.</p>
+<button type="button" onClick="{{reset}}" style="height: 56px; padding: 0 28px; border-radius: 16px; border: 2px solid #1F1F1F; background: #FFC43D; color: #1F1F1F; font-size: 17px; font-weight: 900; cursor: pointer">Mektup kutusuna dön</button>
+</div>
+</sc-if>
+</main>
+</div>
+</template>
+<script src="assets/runtime.js"></script>
+<script>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { tab: 'write', step: 'compose', to: 'KP-6-1183', subject: '', body: '', code: '', codeWrong: false, reported: false };
+  }
+  renderVals() {
+    const st = this.state;
+    const friends = { 'KP-6-1183': 'Deniz' };
+    const toNorm = (st.to || '').trim().toUpperCase();
+    const toOk = !!friends[toNorm];
+    const text = (st.subject || '') + ' ' + (st.body || '');
+    const personal = /\d{4,}/.test(text) || /@/.test(text) || /(adres|sokak|mahalle|okulum|telefon|instagram|tiktok|whatsapp|youtube|soyad)/i.test(text);
+    const cantSend = !toOk || !st.subject.trim() || st.body.trim().length < 10 || personal;
+    const tab = (on) => 'height: 48px; padding: 0 22px; border-radius: 14px; font-size: 16px; font-weight: 900; cursor: pointer; color: #1F1F1F; background: ' + (on ? '#FFC43D' : 'transparent') + '; border: ' + (on ? '2px solid #1F1F1F' : '2px solid transparent') + ';';
+    const writing = st.tab === 'write';
+    return {
+      isInbox: !writing,
+      isCompose: writing && st.step === 'compose',
+      isOtp: writing && st.step === 'otp',
+      isSent: writing && st.step === 'sent',
+      inSel: writing ? 'false' : 'true', wrSel: writing ? 'true' : 'false',
+      inTab: tab(!writing), wrTab: tab(writing),
+      toInbox: () => this.setState({ tab: 'inbox' }),
+      toWrite: () => this.setState({ tab: 'write', step: 'compose' }),
+      to: st.to, subject: st.subject, body: st.body, code: st.code,
+      setTo: (e) => this.setState({ to: e.target.value }),
+      setSubject: (e) => this.setState({ subject: e.target.value }),
+      setBody: (e) => this.setState({ body: e.target.value }),
+      setCode: (e) => this.setState({ code: e.target.value.replace(/\D/g, ''), codeWrong: false }),
+      toOk: toOk, toBad: toNorm.length > 0 && !toOk,
+      count: String((st.body || '').length),
+      hasPersonal: personal,
+      cantSend: cantSend,
+      sendStyle: 'height: 56px; padding: 0 28px; border-radius: 16px; border: 2px solid ' + (cantSend ? '#B9B2A3' : '#1F1F1F') + '; background: ' + (cantSend ? '#F0E9D8' : '#FFC43D') + '; color: #1F1F1F; font-size: 17px; font-weight: 900; cursor: ' + (cantSend ? 'not-allowed' : 'pointer') + ';',
+      askCode: () => { if (!cantSend) this.setState({ step: 'otp', code: '', codeWrong: false }); },
+      backToCompose: () => this.setState({ step: 'compose' }),
+      confirm: () => { if (st.code === '482913') this.setState({ step: 'sent' }); else this.setState({ codeWrong: true }); },
+      codeWrong: st.codeWrong,
+      reset: () => this.setState({ tab: 'inbox', step: 'compose', subject: '', body: '', code: '' }),
+      reply: () => this.setState({ tab: 'write', step: 'compose', to: 'KP-6-1183', subject: 'Ynt: Medi neden kızgındı?' }),
+      report: () => this.setState({ reported: true }),
+      reported: st.reported, notReported: !st.reported
+    };
+  }
+}
+mountDC(Component);
+</script>
+</body>
+</html>

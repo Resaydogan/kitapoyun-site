@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1440">
+<meta name="robots" content="noindex, nofollow">
+<title>kitapoyun · Abone ol</title>
+<link rel="icon" href="assets/hediye.png">
+<style>
+body{margin:0;background:#FFFFFF;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#4F4F4F}
+a{color:#137A70}a:hover{color:#1F1F1F}
+input,select,textarea{font:inherit}
+</style>
+<style>#app{display:flex;justify-content:center}</style>
+</head>
+<body>
+<div style="position:sticky;top:0;z-index:50;background:#1F1F1F;color:#FFFFFF;font:700 15px/1.4 system-ui,-apple-system,'Segoe UI',sans-serif;text-align:center;padding:10px 16px">Bu, kitapoyun’un tanıtım ve test sürümüdür. Satış, ödeme ve üyelik henüz açık değil; formlara yazdıkların hiçbir yere gönderilmez.</div>
+<div id="app"></div>
+<template id="dc-template">
+
+<div style="width: 1440px; height: 1320px; display: flex; flex-direction: column; background: #FFF4D6; font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; color: #4F4F4F">
+
+<header style="height: 96px; flex-shrink: 0; box-sizing: border-box; padding: 0 64px; display: flex; align-items: center; justify-content: space-between; background: #FFFFFF; border-bottom: 1px solid #F0E9D8">
+<a href="index.html" aria-label="kitapoyun ana sayfa" style="display: flex"><img src="assets/logo.png" alt="kitapoyun" style="height: 52px; width: auto"></a>
+<ol aria-label="Adımlar" style="margin: 0; padding: 0; list-style: none; display: flex; gap: 8px">
+<sc-for list="{{steps}}" as="s" hint-placeholder-count="5">
+<li style="{{s.style}}"><span style="{{s.dot}}">{{s.n}}</span>{{s.label}}</li>
+</sc-for>
+</ol>
+<a href="giris.html" style="font-weight: 800">Hesabın var mı? Giriş yap</a>
+</header>
+
+<div style="flex-grow: 1; padding: 48px 64px; display: grid; grid-template-columns: minmax(0, 1fr) 400px; gap: 40px; align-items: start">
+<div style="padding: 48px; border-radius: 24px; background: #FFFFFF; border: 2px solid #1F1F1F; display: flex; flex-direction: column; gap: 28px; min-height: 820px; box-sizing: border-box">
+
+<sc-if value="{{is1}}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; flex-direction: column; gap: 24px">
+<h1 style="margin: 0; font-size: 44px; font-weight: 900; color: #1F1F1F">Kutu kimin için?</h1>
+<div style="display: flex; gap: 12px">
+<sc-for list="{{forWho}}" as="f" hint-placeholder-count="2">
+<button type="button" onClick="{{f.pick}}" style="{{f.style}}">{{f.label}}</button>
+</sc-for>
+</div>
+<h2 style="margin: 12px 0 0; font-size: 26px; font-weight: 900; color: #1F1F1F">Yaş kutusunu seç</h2>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px">
+<sc-for list="{{ages}}" as="a" hint-placeholder-count="3">
+<button type="button" onClick="{{a.pick}}" aria-pressed="{{a.pressed}}" style="{{a.style}}">
+<span style="font-size: 56px; font-weight: 900; line-height: 1">{{a.age}}</span>
+<span style="font-size: 20px; font-weight: 900">{{a.name}}</span>
+<span style="font-size: 15px; font-weight: 600; line-height: 1.4">{{a.note}}</span>
+</button>
+</sc-for>
+</div>
+<p style="margin: 0; font-size: 16px">Kardeşler için ödemeden sonra panelinden ikinci bir kutu ekleyebilirsin.</p>
+</div>
+</sc-if>
+
+<sc-if value="{{is2}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 24px">
+<h1 style="margin: 0; font-size: 44px; font-weight: 900; color: #1F1F1F">Planını seç</h1>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px">
+<sc-for list="{{plans}}" as="p" hint-placeholder-count="4">
+<button type="button" onClick="{{p.pick}}" aria-pressed="{{p.pressed}}" style="{{p.style}}">
+<span style="font-size: 24px; font-weight: 900">{{p.name}}</span>
+<span style="font-size: 34px; font-weight: 900">{{p.price}}</span>
+<span style="font-size: 16px; font-weight: 800">{{p.total}}</span>
+<span style="font-size: 15px; font-weight: 600">{{p.note}}</span>
+</button>
+</sc-for>
+</div>
+<div style="padding: 20px 24px; border-radius: 16px; background: #E8F6F4; font-size: 16px; line-height: 1.55">Aylık planda istediğin ay atlayabilir ya da aboneliği dondurabilirsin. 6 ve 12 aylık planlar tek seferde ödenir ve dönem sonunda aynı planla yenilenir; yenilemeden önce e-posta ile hatırlatırız.</div>
+</div>
+</sc-if>
+
+<sc-if value="{{is3}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 22px">
+<h1 style="margin: 0; font-size: 44px; font-weight: 900; color: #1F1F1F">Sen ve kâşifin</h1>
+<div style="font-size: 20px; font-weight: 900; color: #1F1F1F">Hesap bilgilerin</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
+<label style="display: flex; flex-direction: column; gap: 8px; font-weight: 800; color: #1F1F1F">Ad soyad<input type="text" placeholder="Adın ve soyadın" style="height: 52px; padding: 0 16px; border-radius: 12px; border: 2px solid #4F4F4F; font-size: 16px"></label>
+<label style="display: flex; flex-direction: column; gap: 8px; font-weight: 800; color: #1F1F1F">E-posta<input type="email" placeholder="ornek@eposta.com" style="height: 52px; padding: 0 16px; border-radius: 12px; border: 2px solid #4F4F4F; font-size: 16px"></label>
+<label style="display: flex; flex-direction: column; gap: 8px; font-weight: 800; color: #1F1F1F">Şifre<input type="password" placeholder="En az 8 karakter" style="height: 52px; padding: 0 16px; border-radius: 12px; border: 2px solid #4F4F4F; font-size: 16px"></label>
+<label style="display: flex; flex-direction: column; gap: 8px; font-weight: 800; color: #1F1F1F">Telefon<input type="tel" placeholder="05xx xxx xx xx" style="height: 52px; padding: 0 16px; border-radius: 12px; border: 2px solid #4F4F4F; font-size: 16px"></label>
+</div>
+<div style="font-size: 20px; font-weight: 900; color: #1F1F1F; margin-top: 8px">Kâşifin</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
+<label style="display: flex; flex-direction: column; gap: 8px; font-weight: 800; color: #1F1F1F">Adı (kutunun üstüne yazacağız)<input type="text" placeholder="Çocuğun adı" style="height: 52px; padding: 0 16px; border-radius: 12px; border: 2px solid #4F4F4F; font-size: 16px"></label>
+<label style="display: flex; flex-direction: column; gap: 8px; font-weight: 800; color: #1F1F1F">Doğum ayı ve yılı<input type="month" style="height: 52px; padding: 0 16px; border-radius: 12px; border: 2px solid #4F4F4F; font-size: 16px"></label>
+</div>
+<label style="display: flex; flex-direction: column; gap: 8px; font-weight: 800; color: #1F1F1F">Evde olan kitaplar ya da bilmemiz gerekenler (isteğe bağlı)<textarea rows="3" placeholder="Tekrar gelmemesini istediğin kitaplar, ilgi alanları…" style="padding: 14px 16px; border-radius: 12px; border: 2px solid #4F4F4F; font-size: 16px; resize: none"></textarea></label>
+<label style="display: flex; gap: 12px; align-items: flex-start; font-size: 15px; line-height: 1.45"><input type="checkbox" style="width: 22px; height: 22px; margin: 0; flex-shrink: 0">Çocuğumun adı ve doğum ayının kutunun hazırlanması için işlenmesine ilişkin KVKK aydınlatma metnini okudum.</label>
+<div style="padding: 20px 22px; border-radius: 16px; background: #E8F6F4; border: 2px solid #1F1F1F; display: flex; flex-direction: column; gap: 10px">
+<label style="display: flex; gap: 12px; align-items: flex-start; font-size: 17px; font-weight: 900; color: #1F1F1F; line-height: 1.4"><input type="checkbox" style="width: 22px; height: 22px; margin: 0; flex-shrink: 0">Çocuğum mektup arkadaşı olabilir (isteğe bağlı)</label>
+<div style="font-size: 14px; line-height: 1.55; color: #1F1F1F; padding-left: 34px">Her ay kutuya aynı yaş grubundan bir kâşifin numarasını taşıyan bir kart koyarız. Çocuklar yalnızca bu numaralar üzerinden, kitaplar hakkında mektuplaşır. Her mektup sizin telefonunuza gelen kodla onaylanmadan gitmez, iletilmeden önce ekibimiz tarafından okunur ve tüm yazışmaları panelinizden görebilirsiniz. Çocuğunuzun yalnızca adı ve yaş grubu paylaşılır. İzni istediğiniz zaman panelden kapatabilirsiniz.</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{is4}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 22px">
+<h1 style="margin: 0; font-size: 44px; font-weight: 900; color: #1F1F1F">Kutu nereye gelsin?</h1>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
+<label style="display: flex; flex-direction: column; gap: 8px; font-weight: 800; color: #1F1F1F">Alıcı ad soyad<input type="text" style="height: 52px; padding: 0 16px; border-radius: 12px; border: 2px solid #4F4F4F; font-size: 16px"></label>
+<label style="display: flex; flex-direction: column; gap: 8px; font-weight: 800; color: #1F1F1F">Alıcı telefon<input type="tel" style="height: 52px; padding: 0 16px; border-radius: 12px; border: 2px solid #4F4F4F; font-size: 16px"></label>
+<label style="display: flex; flex-direction: column; gap: 8px; font-weight: 800; color: #1F1F1F">İl<select style="height: 52px; padding: 0 12px; border-radius: 12px; border: 2px solid #4F4F4F; font-size: 16px; background: #FFFFFF"><option>İl seç</option><option>İstanbul</option><option>Ankara</option><option>İzmir</option></select></label>
+<label style="display: flex; flex-direction: column; gap: 8px; font-weight: 800; color: #1F1F1F">İlçe<select style="height: 52px; padding: 0 12px; border-radius: 12px; border: 2px solid #4F4F4F; font-size: 16px; background: #FFFFFF"><option>İlçe seç</option></select></label>
+</div>
+<label style="display: flex; flex-direction: column; gap: 8px; font-weight: 800; color: #1F1F1F">Açık adres<textarea rows="3" style="padding: 14px 16px; border-radius: 12px; border: 2px solid #4F4F4F; font-size: 16px; resize: none"></textarea></label>
+<label style="display: flex; gap: 12px; align-items: center; font-size: 16px"><input type="checkbox" checked style="width: 22px; height: 22px; margin: 0">Fatura adresim teslimat adresimle aynı</label>
+<label style="display: flex; gap: 12px; align-items: center; font-size: 16px"><input type="checkbox" style="width: 22px; height: 22px; margin: 0">Kurumsal fatura istiyorum</label>
+</div>
+</sc-if>
+
+<sc-if value="{{is5}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 22px">
+<h1 style="margin: 0; font-size: 44px; font-weight: 900; color: #1F1F1F">Ödeme</h1>
+<div style="padding: 16px 20px; border-radius: 12px; background: #E8F6F4; font-size: 15px; font-weight: 700">Ödeme [ÖDEME ALTYAPISI] güvencesiyle alınır. Kart bilgilerin kitapoyun'da saklanmaz.</div>
+<label style="display: flex; flex-direction: column; gap: 8px; font-weight: 800; color: #1F1F1F">Kart üzerindeki isim<input disabled type="text" style="height: 52px; padding: 0 16px; border-radius: 12px; border: 2px solid #4F4F4F; font-size: 16px"></label>
+<label style="display: flex; flex-direction: column; gap: 8px; font-weight: 800; color: #1F1F1F">Kart numarası<input disabled type="text" inputmode="numeric" placeholder="Test sürümünde ödeme alınmaz" style="height: 52px; padding: 0 16px; border-radius: 12px; border: 2px solid #4F4F4F; font-size: 16px"></label>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
+<label style="display: flex; flex-direction: column; gap: 8px; font-weight: 800; color: #1F1F1F">Son kullanma<input disabled type="text" placeholder="AA / YY" style="height: 52px; padding: 0 16px; border-radius: 12px; border: 2px solid #4F4F4F; font-size: 16px"></label>
+<label style="display: flex; flex-direction: column; gap: 8px; font-weight: 800; color: #1F1F1F">Güvenlik kodu<input disabled type="text" inputmode="numeric" placeholder="•••" style="height: 52px; padding: 0 16px; border-radius: 12px; border: 2px solid #4F4F4F; font-size: 16px"></label>
+</div>
+<label style="display: flex; flex-direction: column; gap: 8px; font-weight: 800; color: #1F1F1F">İndirim ya da hediye kodu<input disabled type="text" style="height: 52px; padding: 0 16px; border-radius: 12px; border: 2px solid #4F4F4F; font-size: 16px"></label>
+<label style="display: flex; gap: 12px; align-items: flex-start; font-size: 15px; line-height: 1.45"><input type="checkbox" style="width: 22px; height: 22px; margin: 0; flex-shrink: 0">Ön bilgilendirme formunu ve mesafeli satış sözleşmesini okudum, onaylıyorum.</label>
+<label style="display: flex; gap: 12px; align-items: flex-start; font-size: 15px; line-height: 1.45"><input type="checkbox" style="width: 22px; height: 22px; margin: 0; flex-shrink: 0">Aboneliğimin seçtiğim dönem sonunda otomatik yenileneceğini ve panelden istediğim zaman iptal edebileceğimi biliyorum.</label>
+</div>
+</sc-if>
+
+<div style="margin-top: auto; display: flex; justify-content: space-between; align-items: center; padding-top: 24px; border-top: 2px solid #F0E9D8">
+<sc-if value="{{canBack}}" hint-placeholder-val="{{ false }}"><button type="button" onClick="{{back}}" style="height: 56px; padding: 0 24px; border-radius: 16px; border: 2px solid #4F4F4F; background: #FFFFFF; color: #4F4F4F; font: inherit; font-weight: 800; font-size: 17px; cursor: pointer">Geri</button></sc-if>
+<sc-if value="{{is1}}" hint-placeholder-val="{{ true }}"><a href="index.html" style="font-weight: 800">Vazgeç</a></sc-if>
+<sc-if value="{{notLast}}" hint-placeholder-val="{{ true }}"><button type="button" onClick="{{next}}" style="height: 56px; padding: 0 32px; border-radius: 16px; border: 2px solid #1F1F1F; background: #FFC43D; color: #1F1F1F; font: inherit; font-weight: 900; font-size: 17px; cursor: pointer">Devam et</button></sc-if>
+<sc-if value="{{is5}}" hint-placeholder-val="{{ false }}"><a href="panel.html" style="height: 56px; padding: 0 32px; display: flex; align-items: center; border-radius: 16px; border: 2px solid #1F1F1F; background: #1FA89B; color: #1F1F1F; font-weight: 900; font-size: 17px; text-decoration: none">Ödemeyi tamamla</a></sc-if>
+</div>
+</div>
+
+<aside aria-label="Sipariş özeti" style="padding: 32px; border-radius: 24px; background: #FFFFFF; border: 2px solid #1F1F1F; display: flex; flex-direction: column; gap: 18px">
+<div style="font-size: 22px; font-weight: 900; color: #1F1F1F">Sipariş özeti</div>
+<div style="{{summaryBand}}">
+<span style="font-size: 44px; font-weight: 900; line-height: 1">{{sumAge}}</span>
+<span style="font-size: 16px; font-weight: 800">{{sumName}}</span>
+</div>
+<div style="display: flex; justify-content: space-between; font-size: 16px"><span>Plan</span><strong style="color: #1F1F1F">{{sumPlan}}</strong></div>
+<div style="display: flex; justify-content: space-between; font-size: 16px"><span>Kime</span><strong style="color: #1F1F1F">{{sumWho}}</strong></div>
+<div style="display: flex; justify-content: space-between; font-size: 16px"><span>Kargo</span><strong style="color: #1F1F1F">Ücretsiz</strong></div>
+<div style="display: flex; justify-content: space-between; font-size: 16px"><span>İlk kutu</span><strong style="color: #1F1F1F">[AY] kutusu</strong></div>
+<div style="display: flex; justify-content: space-between; align-items: baseline; padding-top: 16px; border-top: 2px solid #F0E9D8"><span style="font-size: 18px; font-weight: 800; color: #1F1F1F">Toplam</span><span style="font-size: 30px; font-weight: 900; color: #1F1F1F">{{sumTotal}}</span></div>
+<div style="padding: 16px; border-radius: 16px; background: #FFF4D6; display: flex; gap: 14px; align-items: center">
+<img src="assets/hediye.png" alt="" style="width: 48px; height: auto">
+<span style="font-size: 14px; line-height: 1.45; color: #1F1F1F">İlk kutunda kâşif haritası ve 1. kâşif sticker'ı hediye.</span>
+</div>
+</aside>
+</div>
+</div>
+</template>
+<script src="assets/runtime.js"></script>
+<script>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { step: 1, age: '68', plan: '12', who: 'self' }; }
+  renderVals() {
+    const st = this.state;
+    const labels = ['Kutu', 'Plan', 'Bilgiler', 'Adres', 'Ödeme'];
+    const steps = labels.map((l, i) => {
+      const n = i + 1, on = n === st.step, done = n < st.step;
+      return {
+        n: String(n), label: l,
+        style: 'display: flex; align-items: center; gap: 8px; padding: 8px 14px 8px 8px; border-radius: 999px; font-size: 15px; font-weight: 800; color: #1F1F1F; background: ' + (on ? '#FFC43D' : '#FFFFFF') + '; border: 2px solid ' + (on || done ? '#1F1F1F' : '#E0D8C6') + ';',
+        dot: 'width: 28px; height: 28px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-weight: 900; background: ' + (done ? '#1FA89B' : '#FFFFFF') + '; border: 2px solid #1F1F1F;'
+      };
+    });
+    const ageData = [
+      { k: '35', age: '3–5', name: 'Minik kâşifler', note: 'Resimli, dokunmalı kitaplar ve güvenli oyuncaklar', color: '#FF6B5B', ink: '#1F1F1F' },
+      { k: '68', age: '6–8', name: 'Kâşifler', note: 'Kısa metinli kitaplar, bulmacalar, hareket', color: '#6BBF59', ink: '#1F1F1F' },
+      { k: '912', age: '9–12', name: 'Usta kâşifler', note: 'Hikâye ve roman, strateji, deney', color: '#5B5BD6', ink: '#FFFFFF' }
+    ];
+    const ages = ageData.map((a) => {
+      const sel = a.k === st.age;
+      return Object.assign({}, a, {
+        pressed: sel ? 'true' : 'false',
+        pick: () => this.setState({ age: a.k }),
+        style: 'min-height: 220px; padding: 24px; border-radius: 20px; text-align: left; cursor: pointer; font: inherit; display: flex; flex-direction: column; justify-content: flex-end; gap: 8px; background: ' + (sel ? a.color : '#FFFFFF') + '; color: ' + (sel ? a.ink : '#1F1F1F') + '; border: ' + (sel ? '4px solid #1F1F1F' : '2px solid #E0D8C6') + ';'
+      });
+    });
+    const planData = [
+      { k: '1', name: 'Aylık', price: '1.200 ₺ / ay', total: 'Her ay 1.200 ₺ çekilir', sum: '1.200 ₺', note: 'Her ay yenilenir, istediğin ay atla' },
+      { k: '6', name: '6 aylık', price: '1.050 ₺ / ay', total: '6.300 ₺ tek seferde', sum: '6.300 ₺', note: '900 ₺ kazançlı' },
+      { k: '12', name: '12 aylık', price: '950 ₺ / ay', total: '11.400 ₺ tek seferde', sum: '11.400 ₺', note: 'En avantajlı · 3.000 ₺ kazançlı · 12. durakta kutu oyunu + %20' }
+    ];
+    const plans = planData.map((p) => {
+      const sel = p.k === st.plan;
+      return Object.assign({}, p, {
+        pressed: sel ? 'true' : 'false',
+        pick: () => this.setState({ plan: p.k }),
+        style: 'min-height: 160px; padding: 24px; border-radius: 20px; text-align: left; cursor: pointer; font: inherit; color: #1F1F1F; display: flex; flex-direction: column; gap: 8px; background: ' + (sel ? '#FFC43D' : '#FFFFFF') + '; border: ' + (sel ? '4px solid #1F1F1F' : '2px solid #E0D8C6') + ';'
+      });
+    });
+    const whoData = [{ k: 'self', label: 'Kendi çocuğum için' }, { k: 'gift', label: 'Hediye olarak' }];
+    const forWho = whoData.map((w) => {
+      const sel = w.k === st.who;
+      return { label: w.label, pick: () => this.setState({ who: w.k }),
+        style: 'height: 52px; padding: 0 22px; border-radius: 16px; font: inherit; font-size: 16px; font-weight: 800; cursor: pointer; color: #1F1F1F; background: ' + (sel ? '#E8F6F4' : '#FFFFFF') + '; border: ' + (sel ? '3px solid #1F1F1F' : '2px solid #E0D8C6') + ';' };
+    });
+    const a = ageData.find((x) => x.k === st.age);
+    const p = planData.find((x) => x.k === st.plan);
+    return {
+      steps, ages, plans, forWho,
+      is1: st.step === 1, is2: st.step === 2, is3: st.step === 3, is4: st.step === 4, is5: st.step === 5,
+      canBack: st.step > 1, notLast: st.step < 5,
+      next: () => this.setState({ step: Math.min(5, st.step + 1) }),
+      back: () => this.setState({ step: Math.max(1, st.step - 1) }),
+      sumAge: a.age, sumName: a.name + ' yaş kutusu', sumPlan: p.name, sumTotal: p.sum, sumWho: st.who === 'gift' ? 'Hediye' : 'Kendi çocuğum',
+      summaryBand: 'padding: 20px; border-radius: 16px; border: 2px solid #1F1F1F; display: flex; flex-direction: column; gap: 6px; background: ' + a.color + '; color: ' + a.ink + ';'
+    };
+  }
+}
+mountDC(Component);
+</script>
+</body>
+</html>

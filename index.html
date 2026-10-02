@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1440">
+<meta name="robots" content="noindex, nofollow">
+<title>kitapoyun · Ana sayfa</title>
+<link rel="icon" href="assets/hediye.png">
+<style>
+body{margin:0;background:#FFFFFF;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#4F4F4F}
+a{color:#137A70}a:hover{color:#1F1F1F}
+</style>
+<style>#app{display:flex;justify-content:center}</style>
+</head>
+<body>
+<div style="position:sticky;top:0;z-index:50;background:#1F1F1F;color:#FFFFFF;font:700 15px/1.4 system-ui,-apple-system,'Segoe UI',sans-serif;text-align:center;padding:10px 16px">Bu, kitapoyun’un tanıtım ve test sürümüdür. Satış, ödeme ve üyelik henüz açık değil; formlara yazdıkların hiçbir yere gönderilmez.</div>
+<div id="app"></div>
+<template id="dc-template">
+
+<div style="width: 1440px; height: 6740px; display: flex; flex-direction: column; background: #FFFFFF; font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; color: #4F4F4F">
+
+<header style="height: 96px; flex-shrink: 0; box-sizing: border-box; padding: 0 64px; display: flex; align-items: center; justify-content: space-between; background: #FFFFFF; border-bottom: 1px solid #F0E9D8">
+<a href="index.html" aria-label="kitapoyun ana sayfa" style="display: flex"><img src="assets/logo.png" alt="kitapoyun" style="height: 52px; width: auto"></a>
+<nav aria-label="Ana menü" style="display: flex; gap: 22px; font-size: 16px; font-weight: 700">
+<a href="#kutular" style="color: #4F4F4F; text-decoration: none">Kutular</a>
+<a href="ayin-kutusu.html" style="color: #4F4F4F; text-decoration: none">Ayın kutusu</a>
+<a href="#nasil" style="color: #4F4F4F; text-decoration: none">Nasıl çalışır?</a>
+<a href="#harita" style="color: #4F4F4F; text-decoration: none">Kâşif haritası</a>
+<a href="#kulup" style="color: #4F4F4F; text-decoration: none">Kulüp</a>
+<a href="#mektup" style="color: #4F4F4F; text-decoration: none">Mektup arkadaşı</a>
+<a href="sss.html" style="color: #4F4F4F; text-decoration: none">SSS</a>
+</nav>
+<div style="display: flex; gap: 12px; align-items: center">
+<a href="giris.html" style="height: 48px; padding: 0 22px; display: flex; align-items: center; border-radius: 16px; border: 2px solid #4F4F4F; color: #4F4F4F; font-weight: 800; text-decoration: none">Giriş yap</a>
+<a href="abone-ol.html" style="height: 48px; padding: 0 24px; display: flex; align-items: center; border-radius: 16px; background: #FFC43D; color: #1F1F1F; font-weight: 800; text-decoration: none; border: 2px solid #1F1F1F">Abone ol</a>
+</div>
+</header>
+
+<section style="padding: 72px 64px 88px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 56px; align-items: center; background: #FFF4D6">
+<div style="display: flex; flex-direction: column; gap: 28px">
+<div style="align-self: flex-start; padding: 8px 16px; border-radius: 999px; background: #FFFFFF; border: 2px solid #1F1F1F; font-size: 14px; font-weight: 800; color: #1F1F1F">3-12 yaş · her ay kapında</div>
+<h1 style="margin: 0; font-size: 96px; line-height: 0.95; font-weight: 900; color: #1F1F1F; letter-spacing: -2px">Aç, oku, oyna!</h1>
+<p style="margin: 0; font-size: 22px; line-height: 1.5; max-width: 560px">Okudukça oyna, oynadıkça oku. Yaşına göre seçilmiş kitaplar, bir oyuncak, etkinlik sayfaları ve koleksiyonluk kâşif sticker'ı her ay tek bir kutuda.</p>
+<div style="display: flex; gap: 16px; align-items: center">
+<a href="abone-ol.html" style="height: 60px; padding: 0 32px; display: flex; align-items: center; border-radius: 16px; background: #1FA89B; color: #1F1F1F; font-size: 18px; font-weight: 900; text-decoration: none; border: 2px solid #1F1F1F">Kutunu seç</a>
+<a href="#icerik" style="height: 60px; padding: 0 24px; display: flex; align-items: center; color: #1F1F1F; font-size: 18px; font-weight: 800">Kutuda neler var?</a>
+</div>
+<div style="display: flex; gap: 28px; font-size: 15px; font-weight: 700; color: #4F4F4F">
+<span>Ücretsiz kargo</span><span>İmzalı kitaplar</span><span>İstediğin ay dondur</span>
+</div>
+</div>
+<div style="position: relative; height: 520px">
+<div style="position: absolute; left: 60px; top: 110px; width: 520px; height: 360px; border-radius: 24px; background: #1FA89B; border: 3px solid #1F1F1F"></div>
+<div style="position: absolute; left: 60px; top: 110px; width: 520px; height: 70px; border-radius: 24px 24px 0 0; background: #178F84; border-bottom: 3px solid #1F1F1F"></div>
+<div style="position: absolute; left: 300px; top: 110px; width: 40px; height: 360px; background: #FFC43D; border-left: 3px solid #1F1F1F; border-right: 3px solid #1F1F1F"></div>
+<div style="position: absolute; left: 120px; top: 36px; width: 110px; height: 150px; border-radius: 10px; background: #FF6B5B; border: 3px solid #1F1F1F; transform: rotate(-8deg)"></div>
+<div style="position: absolute; left: 400px; top: 26px; width: 120px; height: 160px; border-radius: 10px; background: #FFC43D; border: 3px solid #1F1F1F; transform: rotate(7deg)"></div>
+<div style="position: absolute; left: 400px; top: 60px; width: 120px; text-align: center; font-weight: 900; font-size: 15px; color: #1F1F1F; transform: rotate(7deg)">Robotlar da<br>Çorap Giyer</div>
+<img src="assets/hediye.png" alt="" style="position: absolute; left: 240px; top: 0; width: 170px; height: auto">
+<div style="position: absolute; left: 100px; top: 240px; display: flex; gap: 14px">
+<div style="width: 96px; height: 96px; border-radius: 48px; background: #FFFFFF; border: 3px solid #1F1F1F; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 34px; color: #1F1F1F">5</div>
+</div>
+<div style="position: absolute; left: 380px; top: 250px; width: 170px; padding: 14px; box-sizing: border-box; border-radius: 16px; background: #FFFFFF; border: 3px solid #1F1F1F; font-size: 14px; font-weight: 800; color: #1F1F1F; line-height: 1.3">Bu ayın kâşifi haritana yapıştırılmayı bekliyor!</div>
+</div>
+</section>
+
+<section id="icerik" style="padding: 96px 64px; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 760px">
+<div style="font-size: 15px; font-weight: 900; letter-spacing: 2px; color: #137A70">KUTUDA NELER VAR?</div>
+<h2 style="margin: 0; font-size: 52px; line-height: 1.05; font-weight: 900; color: #1F1F1F">Her ay, yedi sürpriz bir arada</h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px">
+<div style="padding: 32px; border-radius: 24px; border: 2px solid #F0E9D8; display: flex; flex-direction: column; gap: 14px">
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#1F1F1F" stroke-width="3" stroke-linejoin="round" aria-hidden="true"><path d="M24 12C18 8 10 8 4 10v28c6-2 14-2 20 2 6-4 14-4 20-2V10c-6-2-14-2-20 2z"></path><path d="M24 12v28"></path></svg>
+<div style="font-size: 24px; font-weight: 900; color: #1F1F1F">2 seçkin kitap</div>
+<p style="margin: 0; font-size: 17px; line-height: 1.55">Yaşına göre seçilmiş, önceden duyurduğumuz iki resimli kitap. Yazar dostlarımızın imzasıyla.</p>
+</div>
+<div style="padding: 32px; border-radius: 24px; border: 2px solid #F0E9D8; display: flex; flex-direction: column; gap: 14px">
+<img src="assets/hediye.png" alt="" style="width: 56px; height: auto">
+<div style="font-size: 24px; font-weight: 900; color: #1F1F1F">1 sürpriz kitap</div>
+<p style="margin: 0; font-size: 17px; line-height: 1.55">Kendi zarfında gelen, kutuyu açana kadar kimsenin bilmediği üçüncü kitap.</p>
+</div>
+<div style="padding: 32px; border-radius: 24px; border: 2px solid #F0E9D8; display: flex; flex-direction: column; gap: 14px">
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#1F1F1F" stroke-width="3" stroke-linecap="round" aria-hidden="true"><circle cx="24" cy="26" r="16"></circle><path d="M24 10V4M10 18l-5-4M38 18l5-4M16 26h16M24 18v16"></path></svg>
+<div style="font-size: 24px; font-weight: 900; color: #1F1F1F">1 oyuncak</div>
+<p style="margin: 0; font-size: 17px; line-height: 1.55">Kitaplarla aynı temada, yaşına uygun ve güvenlik belgeli bir oyuncak.</p>
+</div>
+<div style="padding: 32px; border-radius: 24px; border: 2px solid #F0E9D8; display: flex; flex-direction: column; gap: 14px">
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#1F1F1F" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><rect x="8" y="4" width="28" height="40" rx="4"></rect><path d="M14 14h16M14 22h16M14 30h8"></path><path d="M34 30l8-8 4 4-8 8h-4z"></path></svg>
+<div style="font-size: 24px; font-weight: 900; color: #1F1F1F">5 etkinlik sayfası</div>
+<p style="margin: 0; font-size: 17px; line-height: 1.55">Kitaplardan çıkan oyunlar, bulmacalar ve hareket etkinlikleri. Okuduğunu oyuna çevirir.</p>
+</div>
+<div style="padding: 32px; border-radius: 24px; border: 2px solid #F0E9D8; display: flex; flex-direction: column; gap: 14px">
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#1F1F1F" stroke-width="3" stroke-linejoin="round" aria-hidden="true"><path d="M8 8h32v20L28 40H8z"></path><path d="M28 40V28h12"></path><circle cx="18" cy="20" r="3"></circle></svg>
+<div style="font-size: 24px; font-weight: 900; color: #1F1F1F">1 sticker sayfası</div>
+<p style="margin: 0; font-size: 17px; line-height: 1.55">Ayın temasına göre hazırlanmış, etkinliklerde de kullanılan sticker'lar.</p>
+</div>
+<div style="padding: 32px; border-radius: 24px; background: #FFC43D; border: 2px solid #1F1F1F; display: flex; flex-direction: column; gap: 14px">
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#1F1F1F" stroke-width="3" stroke-linejoin="round" aria-hidden="true"><path d="M24 44s14-13 14-24a14 14 0 0 0-28 0c0 11 14 24 14 24z"></path><circle cx="24" cy="20" r="5"></circle></svg>
+<div style="font-size: 24px; font-weight: 900; color: #1F1F1F">+ Bu ayın kâşifi</div>
+<p style="margin: 0; font-size: 17px; line-height: 1.55; color: #1F1F1F">Kendi zarfında gelen özel sticker. Haritandaki yerine yapıştır, 12 kâşifi topla.</p>
+</div>
+<a href="#mektup" style="grid-column: span 3; padding: 32px 36px; border-radius: 24px; background: #1FA89B; border: 2px solid #1F1F1F; display: flex; align-items: center; gap: 32px; color: #1F1F1F; text-decoration: none">
+<svg width="64" height="64" viewBox="0 0 48 48" fill="none" stroke="#1F1F1F" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true" style="flex-shrink: 0"><rect x="4" y="10" width="40" height="28" rx="4" fill="#FFFFFF"></rect><path d="M4 14l20 14 20-14"></path></svg>
+<div style="display: flex; flex-direction: column; gap: 8px; flex-grow: 1">
+<div style="display: flex; align-items: center; gap: 12px"><span style="font-size: 26px; font-weight: 900">+ Dijital mektup arkadaşlığı</span><span style="padding: 5px 12px; border-radius: 999px; background: #FFFFFF; border: 2px solid #1F1F1F; font-size: 13px; font-weight: 900">Abonelere özel</span></div>
+<p style="margin: 0; font-size: 17px; line-height: 1.55">Kutundaki kartvizitte aynı kitapları okuyan bir kâşifin numarası var. Ona mektup yaz, okuduklarınızı konuşun. Her mektup veli onayıyla gider, ekibimiz okuduktan sonra iletir.</p>
+</div>
+<span style="flex-shrink: 0; height: 52px; padding: 0 22px; display: flex; align-items: center; border-radius: 16px; background: #FFFFFF; border: 2px solid #1F1F1F; font-weight: 900">Nasıl çalışır?</span>
+</a>
+</div>
+</section>
+
+<section id="kutular" style="padding: 96px 64px; display: flex; flex-direction: column; gap: 48px; background: #E8F6F4">
+<div style="display: flex; justify-content: space-between; align-items: flex-end">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="font-size: 15px; font-weight: 900; letter-spacing: 2px; color: #137A70">YAŞ KUTULARI</div>
+<h2 style="margin: 0; font-size: 52px; line-height: 1.05; font-weight: 900; color: #1F1F1F">Her yaşa kendi kutusu</h2>
+</div>
+<p style="margin: 0; font-size: 18px; line-height: 1.5; max-width: 460px">Kitaplar, oyuncak ve etkinlikler yaş grubuna göre ayrı ayrı seçilir. Çocuğun büyüdükçe kutusu da onunla büyür.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px">
+<div style="border-radius: 24px; background: #FFFFFF; border: 2px solid #1F1F1F; overflow: hidden; display: flex; flex-direction: column">
+<div style="height: 180px; background: #FF6B5B; padding: 28px; box-sizing: border-box; display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid #1F1F1F">
+<div style="font-size: 80px; font-weight: 900; line-height: 1; color: #1F1F1F">3–5</div>
+<svg width="56" height="56" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="20" fill="#FFFFFF" stroke="#1F1F1F" stroke-width="3"></circle></svg>
+</div>
+<div style="padding: 28px; display: flex; flex-direction: column; gap: 14px; flex-grow: 1">
+<div style="font-size: 26px; font-weight: 900; color: #1F1F1F">Minik kâşifler</div>
+<p style="margin: 0; font-size: 17px; line-height: 1.55">Bol resimli, dokunmalı ve sesli okumaya uygun kitaplar; büyük parçalı, güvenli oyuncaklar; boyama ve eşleştirme etkinlikleri.</p>
+<a href="abone-ol.html" style="margin-top: auto; height: 52px; display: flex; align-items: center; justify-content: center; border-radius: 16px; background: #FFC43D; border: 2px solid #1F1F1F; color: #1F1F1F; font-weight: 900; text-decoration: none">Bu kutuyu seç</a>
+</div>
+</div>
+<div style="border-radius: 24px; background: #FFFFFF; border: 2px solid #1F1F1F; overflow: hidden; display: flex; flex-direction: column">
+<div style="height: 180px; background: #6BBF59; padding: 28px; box-sizing: border-box; display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid #1F1F1F">
+<div style="font-size: 80px; font-weight: 900; line-height: 1; color: #1F1F1F">6–8</div>
+<svg width="56" height="56" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 5L44 41H4z" fill="#FFFFFF" stroke="#1F1F1F" stroke-width="3" stroke-linejoin="round"></path></svg>
+</div>
+<div style="padding: 28px; display: flex; flex-direction: column; gap: 14px; flex-grow: 1">
+<div style="font-size: 26px; font-weight: 900; color: #1F1F1F">Kâşifler</div>
+<p style="margin: 0; font-size: 17px; line-height: 1.55">Okumayı yeni söken çocuklar için kısa metinli kitaplar, akıl oyunları, bulmacalar ve hareket etkinlikleri.</p>
+<a href="abone-ol.html" style="margin-top: auto; height: 52px; display: flex; align-items: center; justify-content: center; border-radius: 16px; background: #FFC43D; border: 2px solid #1F1F1F; color: #1F1F1F; font-weight: 900; text-decoration: none">Bu kutuyu seç</a>
+</div>
+</div>
+<div style="border-radius: 24px; background: #FFFFFF; border: 2px solid #1F1F1F; overflow: hidden; display: flex; flex-direction: column">
+<div style="height: 180px; background: #5B5BD6; padding: 28px; box-sizing: border-box; display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid #1F1F1F">
+<div style="font-size: 80px; font-weight: 900; line-height: 1; color: #FFFFFF">9–12</div>
+<svg width="56" height="56" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4l5.9 12.6 13.6 1.7-10 9.4 2.6 13.5L24 34.5l-12.1 6.7 2.6-13.5-10-9.4 13.6-1.7z" fill="#FFFFFF" stroke="#1F1F1F" stroke-width="3" stroke-linejoin="round"></path></svg>
+</div>
+<div style="padding: 28px; display: flex; flex-direction: column; gap: 14px; flex-grow: 1">
+<div style="font-size: 26px; font-weight: 900; color: #1F1F1F">Usta kâşifler</div>
+<p style="margin: 0; font-size: 17px; line-height: 1.55">Hikâye ve roman ağırlıklı kitaplar, strateji oyunları, deney ve yaratıcı yazma etkinlikleri. Kâşif kartlarıyla koleksiyon albümü.</p>
+<a href="abone-ol.html" style="margin-top: auto; height: 52px; display: flex; align-items: center; justify-content: center; border-radius: 16px; background: #FFC43D; border: 2px solid #1F1F1F; color: #1F1F1F; font-weight: 900; text-decoration: none">Bu kutuyu seç</a>
+</div>
+</div>
+</div>
+</section>
+
+
+
+<section id="nasil" style="padding: 96px 64px; display: flex; flex-direction: column; gap: 48px; background: #FFF4D6">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="font-size: 15px; font-weight: 900; letter-spacing: 2px; color: #137A70">NASIL ÇALIŞIR?</div>
+<h2 style="margin: 0; font-size: 52px; line-height: 1.05; font-weight: 900; color: #1F1F1F">Dört adımda okuma macerası</h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 24px; background: #FFFFFF; border: 2px solid #1F1F1F">
+<div style="width: 56px; height: 56px; border-radius: 28px; background: #1FA89B; border: 2px solid #1F1F1F; display: flex; align-items: center; justify-content: center; font-size: 26px; font-weight: 900; color: #1F1F1F">1</div>
+<div style="font-size: 22px; font-weight: 900; color: #1F1F1F">Yaşını seç</div>
+<p style="margin: 0; font-size: 16px; line-height: 1.55">3-5, 6-8 ya da 9-12 yaş kutusu. Kardeşler için ayrı kutular eklenebilir.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 24px; background: #FFFFFF; border: 2px solid #1F1F1F">
+<div style="width: 56px; height: 56px; border-radius: 28px; background: #1FA89B; border: 2px solid #1F1F1F; display: flex; align-items: center; justify-content: center; font-size: 26px; font-weight: 900; color: #1F1F1F">2</div>
+<div style="font-size: 22px; font-weight: 900; color: #1F1F1F">Planını seç</div>
+<p style="margin: 0; font-size: 16px; line-height: 1.55">Aylık, 6 aylık ya da 12 aylık. Uzun planlarda kutu başı fiyat düşer.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 24px; background: #FFFFFF; border: 2px solid #1F1F1F">
+<div style="width: 56px; height: 56px; border-radius: 28px; background: #1FA89B; border: 2px solid #1F1F1F; display: flex; align-items: center; justify-content: center; font-size: 26px; font-weight: 900; color: #1F1F1F">3</div>
+<div style="font-size: 22px; font-weight: 900; color: #1F1F1F">Kutun kapında</div>
+<p style="margin: 0; font-size: 16px; line-height: 1.55">Kutular her ayın ilk [X] günü içinde ücretsiz kargoyla yola çıkar.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 24px; background: #FFFFFF; border: 2px solid #1F1F1F">
+<div style="width: 56px; height: 56px; border-radius: 28px; background: #FFC43D; border: 2px solid #1F1F1F; display: flex; align-items: center; justify-content: center; font-size: 26px; font-weight: 900; color: #1F1F1F">4</div>
+<div style="font-size: 22px; font-weight: 900; color: #1F1F1F">Aç, oku, oyna!</div>
+<p style="margin: 0; font-size: 16px; line-height: 1.55">Kitapları oku, etkinlikleri yap, ayın kâşifini haritana yapıştır.</p>
+</div>
+</div>
+</section>
+
+<section id="harita" style="padding: 96px 64px; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 700px">
+<div style="font-size: 15px; font-weight: 900; letter-spacing: 2px; color: #137A70">KÂŞİF HARİTASI</div>
+<h2 style="margin: 0; font-size: 52px; line-height: 1.05; font-weight: 900; color: #1F1F1F">12 durak, 12 kâşif, 2 büyük ödül</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.55">İlk kutunla birlikte haritan gelir. Her ay yeni bir kâşif sticker'ını durağına yapıştırırsın. Hangi ay başlarsan başla, yolculuk senin 1. durağından başlar.</p>
+</div>
+</div>
+<div style="position: relative; height: 380px; border-radius: 24px; background: #E8F6F4; border: 2px solid #1F1F1F; overflow: hidden">
+<svg width="1308" height="380" viewBox="0 0 1308 380" style="position: absolute; left: 0; top: 0" aria-hidden="true"><path d="{{mapPath}}" fill="none" stroke="#1F1F1F" stroke-width="4" stroke-dasharray="2 14" stroke-linecap="round"></path></svg>
+<sc-for list="{{stops}}" as="s" hint-placeholder-count="12">
+<div style="{{s.style}}">{{s.label}}</div>
+</sc-for>
+<img src="assets/hediye.png" alt="12. durak: büyük ödül" style="position: absolute; left: 1096px; top: 48px; width: 124px; height: auto">
+<div style="position: absolute; left: 1060px; top: 196px; padding: 8px 14px; border-radius: 999px; background: #FFC43D; border: 2px solid #1F1F1F; font-size: 15px; font-weight: 900; color: #1F1F1F">12. durak: kutu oyunu + %20</div>
+</div>
+<div style="padding: 36px 40px; border-radius: 24px; background: #FFC43D; border: 3px solid #1F1F1F; display: grid; grid-template-columns: 300px minmax(0, 1fr) minmax(0, 1fr); gap: 28px; align-items: center">
+<div style="display: flex; flex-direction: column; gap: 10px; color: #1F1F1F">
+<div style="font-size: 14px; font-weight: 900; letter-spacing: 1.5px">12. DURAĞIN ÖDÜLLERİ</div>
+<div style="font-size: 30px; font-weight: 900; line-height: 1.15">Haritayı tamamlayan her kâşife iki hediye!</div>
+</div>
+<div style="padding: 24px; border-radius: 20px; background: #FFFFFF; border: 2px solid #1F1F1F; display: flex; gap: 20px; align-items: center">
+<svg width="72" height="72" viewBox="0 0 48 48" fill="none" stroke="#1F1F1F" stroke-width="2.5" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><rect x="4" y="12" width="40" height="30" rx="4" fill="#1FA89B"></rect><path d="M4 20h40" stroke-linecap="round"></path><rect x="14" y="4" width="20" height="10" rx="3" fill="#FFFFFF"></rect><rect x="12" y="25" width="10" height="10" rx="2.5" fill="#FFFFFF"></rect><rect x="26" y="25" width="10" height="10" rx="2.5" fill="#FF6B5B"></rect><circle cx="17" cy="30" r="1.6" fill="#1F1F1F" stroke="none"></circle><circle cx="29" cy="28" r="1.4" fill="#1F1F1F" stroke="none"></circle><circle cx="33" cy="32" r="1.4" fill="#1F1F1F" stroke="none"></circle></svg>
+<div style="display: flex; flex-direction: column; gap: 6px"><div style="font-size: 24px; font-weight: 900; color: #1F1F1F">1 kutu oyunu</div><div style="font-size: 16px; line-height: 1.5">Yaş grubuna uygun, ailecek oynanacak bir kutu oyunu kapına gelir.</div></div>
+</div>
+<div style="padding: 24px; border-radius: 20px; background: #FFFFFF; border: 2px solid #1F1F1F; display: flex; gap: 20px; align-items: center">
+<div style="width: 72px; height: 72px; flex-shrink: 0; border-radius: 36px; background: #1FA89B; border: 2px solid #1F1F1F; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 900; color: #1F1F1F">%20</div>
+<div style="display: flex; flex-direction: column; gap: 6px"><div style="font-size: 24px; font-weight: 900; color: #1F1F1F">Yeni yılda %20 indirim</div><div style="font-size: 16px; line-height: 1.5">Bir sonraki yılın aboneliği %20 indirimli başlar.</div></div>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px">
+<div style="padding: 24px; border-radius: 20px; background: #FFF4D6; font-size: 17px; line-height: 1.55"><strong style="color: #1F1F1F">Ödülünü nasıl alırsın?</strong> Tamamlanmış haritanın fotoğrafını üye panelinden yükle; kutu oyunun kargoya çıksın, indirimin hesabına tanımlansın.</div>
+<div style="padding: 24px; border-radius: 20px; background: #FFF4D6; font-size: 17px; line-height: 1.55"><strong style="color: #1F1F1F">Kaçırdın mı?</strong> Eksik kâşifleri üye panelinden ayrıca sipariş edebilirsin, yolculuğun yarım kalmaz.</div>
+<div style="padding: 24px; border-radius: 20px; background: #FFF4D6; font-size: 17px; line-height: 1.55"><strong style="color: #1F1F1F">Yıl ortasında mı başladın?</strong> Duraklar ay adıyla değil numarayla ilerler. Senin 12. durağın, senin ödülün.</div>
+</div>
+</section>
+
+<section id="kulup" style="padding: 96px 64px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; background: #E8F6F4">
+<div style="padding: 48px; border-radius: 24px; background: #FFFFFF; border: 2px solid #1F1F1F; display: flex; flex-direction: column; gap: 18px">
+<div style="font-size: 15px; font-weight: 900; letter-spacing: 2px; color: #137A70">İMZALI KİTAPLAR</div>
+<h3 style="margin: 0; font-size: 40px; line-height: 1.1; font-weight: 900; color: #1F1F1F">Yazarlar kitaplarını sana imzalıyor</h3>
+<p style="margin: 0; font-size: 18px; line-height: 1.6">Kutudaki kitapların önemli bir kısmı, çocuk edebiyatına emek veren yazar dostlarımızdan geliyor ve imzalı olarak ulaşıyor. Her kitabın içinde yazarından küçük bir not seni bekliyor.</p>
+</div>
+<div style="padding: 48px; border-radius: 24px; background: #FFC43D; border: 2px solid #1F1F1F; display: flex; flex-direction: column; gap: 18px">
+<div style="font-size: 15px; font-weight: 900; letter-spacing: 2px; color: #1F1F1F">KİTAPOYUN KULÜBÜ</div>
+<h3 style="margin: 0; font-size: 40px; line-height: 1.1; font-weight: 900; color: #1F1F1F">Her ay online yazar buluşması</h3>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #1F1F1F">Abonelerimize özel ayda bir buluşmada kâşifler, kutudaki kitapların yazarlarıyla tanışıyor, soru soruyor ve birlikte oyun oynuyor.</p>
+<a href="panel.html" style="align-self: flex-start; height: 52px; padding: 0 24px; display: flex; align-items: center; border-radius: 16px; background: #FFFFFF; border: 2px solid #1F1F1F; color: #1F1F1F; font-weight: 900; text-decoration: none">Sıradaki buluşma: [TARİH]</a>
+</div>
+</section>
+
+<section id="mektup" style="padding: 96px 64px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px; align-items: center; background: #FFF4D6">
+<div style="display: flex; flex-direction: column; gap: 22px">
+<div style="align-self: flex-start; padding: 8px 16px; border-radius: 999px; background: #FFFFFF; border: 2px solid #1F1F1F; font-size: 14px; font-weight: 900; color: #1F1F1F">Sadece kitapoyun abonelerine</div>
+<h2 style="margin: 0; font-size: 56px; line-height: 1.02; font-weight: 900; color: #1F1F1F">Her kutudan yeni bir mektup arkadaşı çıkıyor!</h2>
+<p style="margin: 0; font-size: 19px; line-height: 1.6">Kutunun içinde küçük bir kart var. Üzerinde, aynı ay aynı kitapları okuyan başka bir kâşifin numarası yazıyor. Çocuğun bu numarayla arkadaşına mektup yazıyor, en sevdiği robotu anlatıyor, sorular soruyor. Okumak artık paylaşılan bir macera.</p>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px">
+<div style="padding: 18px 20px; border-radius: 16px; background: #FFFFFF; border: 2px solid #1F1F1F; display: flex; flex-direction: column; gap: 6px"><strong style="font-size: 17px; color: #1F1F1F">Okuduğunu anlatır</strong><span style="font-size: 15px; line-height: 1.5">Kitaplar üzerine konuşmak anlamayı ve ifadeyi güçlendirir.</span></div>
+<div style="padding: 18px 20px; border-radius: 16px; background: #FFFFFF; border: 2px solid #1F1F1F; display: flex; flex-direction: column; gap: 6px"><strong style="font-size: 17px; color: #1F1F1F">Yazmayı sever</strong><span style="font-size: 15px; line-height: 1.5">Gerçek bir okuru olan yazı, en güzel yazı ödevidir.</span></div>
+<div style="padding: 18px 20px; border-radius: 16px; background: #FFFFFF; border: 2px solid #1F1F1F; display: flex; flex-direction: column; gap: 6px"><strong style="font-size: 17px; color: #1F1F1F">Her mektubu veli onaylar</strong><span style="font-size: 15px; line-height: 1.5">Gönderim, velinin telefonuna gelen kodla yapılır.</span></div>
+<div style="padding: 18px 20px; border-radius: 16px; background: #FFFFFF; border: 2px solid #1F1F1F; display: flex; flex-direction: column; gap: 6px"><strong style="font-size: 17px; color: #1F1F1F">Ekibimiz okur, sonra iletir</strong><span style="font-size: 15px; line-height: 1.5">Yalnızca ad ve yaş grubu paylaşılır, başka bilgi değil.</span></div>
+</div>
+<div style="display: flex; gap: 16px; align-items: center">
+<a href="abone-ol.html" style="height: 60px; padding: 0 30px; display: flex; align-items: center; border-radius: 16px; background: #FFC43D; border: 2px solid #1F1F1F; color: #1F1F1F; font-size: 18px; font-weight: 900; text-decoration: none">Abone ol, ilk arkadaşını tanı</a>
+<a href="sss.html" style="font-size: 17px; font-weight: 800">Nasıl çalışır?</a>
+</div>
+</div>
+<div style="position: relative; height: 520px">
+<div style="position: absolute; left: 40px; top: 30px; width: 460px; height: 300px; box-sizing: border-box; padding: 28px; border-radius: 22px; background: #FFFFFF; border: 3px solid #1F1F1F; transform: rotate(-5deg); display: flex; flex-direction: column; justify-content: space-between; overflow: hidden">
+<div style="position: absolute; right: -50px; top: -50px; width: 180px; height: 180px; border-radius: 90px; background: #FFC43D"></div>
+<img src="assets/logo.png" alt="" style="position: relative; width: 150px; height: auto">
+<div style="position: relative; font-size: 22px; font-weight: 900; color: #1F1F1F; line-height: 1.2">Yeni bir mektup arkadaşın var!</div>
+<div style="position: relative; display: flex; justify-content: space-between; align-items: flex-end">
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 12px; font-weight: 800">Kâşif numarası</span><span style="font-size: 38px; font-weight: 900; color: #1F1F1F; letter-spacing: 1px; line-height: 1">KP-6-1183</span></div>
+<span style="padding: 8px 12px; border-radius: 12px; background: #6BBF59; border: 2px solid #1F1F1F; font-size: 18px; font-weight: 900; color: #1F1F1F">Deniz</span>
+</div>
+</div>
+<div style="position: absolute; left: 170px; top: 230px; width: 440px; box-sizing: border-box; padding: 28px; border-radius: 22px; background: #FFFFFF; border: 3px solid #1F1F1F; transform: rotate(3deg); display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; font-size: 13px; font-weight: 800"><span>Kimden: KP-6-1183</span><span>Konu: Medi neden kızgındı?</span></div>
+<div style="height: 2px; background: #F0E9D8"></div>
+<div style="font-size: 18px; line-height: 1.55; color: #1F1F1F">Merhaba! En çok Bubu'yu sevdim çünkü hep şaşırıyor. Sen hangi robotu sevdin? Dev robotu açınca ne yaptın?</div>
+<div style="align-self: flex-end; padding: 6px 12px; border-radius: 999px; background: #E8F6F4; border: 2px solid #1F1F1F; font-size: 13px; font-weight: 800; color: #1F1F1F">Veli onaylı</div>
+</div>
+<img src="assets/hediye.png" alt="" style="position: absolute; left: 0; top: 330px; width: 130px; height: auto; transform: rotate(-12deg)">
+</div>
+</section>
+
+<section id="fiyatlar" style="padding: 96px 64px; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 12px; align-items: center; text-align: center">
+<div style="font-size: 15px; font-weight: 900; letter-spacing: 2px; color: #137A70">PLANLAR</div>
+<h2 style="margin: 0; font-size: 52px; line-height: 1.05; font-weight: 900; color: #1F1F1F">Sana uygun planı seç</h2>
+<p style="margin: 0; font-size: 18px">Tüm planlarda kargo ücretsiz. İstediğin ay atla ya da dondur.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; align-items: stretch">
+<div style="padding: 36px; border-radius: 24px; background: #FFFFFF; border: 2px solid #F0E9D8; display: flex; flex-direction: column; gap: 14px; position: relative; color: #1F1F1F">
+<div style="font-size: 24px; font-weight: 900">Aylık</div>
+<div style="display: flex; align-items: baseline; gap: 6px"><span style="font-size: 52px; font-weight: 900; line-height: 1">1.200</span><span style="font-size: 18px; font-weight: 800">₺ / ay</span></div>
+<div style="font-size: 16px; font-weight: 700">Her ay yenilenir, istediğin ay atla</div>
+<div style="height: 34px"></div>
+<a href="abone-ol.html" style="margin-top: auto; height: 56px; display: flex; align-items: center; justify-content: center; border-radius: 16px; border: 2px solid #1F1F1F; color: #1F1F1F; font-weight: 900; text-decoration: none; background: #FFFFFF">Seç</a>
+</div>
+<div style="padding: 36px; border-radius: 24px; background: #FFFFFF; border: 2px solid #F0E9D8; display: flex; flex-direction: column; gap: 14px; position: relative; color: #1F1F1F">
+<div style="font-size: 24px; font-weight: 900">6 aylık</div>
+<div style="display: flex; align-items: baseline; gap: 6px"><span style="font-size: 52px; font-weight: 900; line-height: 1">1.050</span><span style="font-size: 18px; font-weight: 800">₺ / ay</span></div>
+<div style="font-size: 16px; font-weight: 700">6.300 ₺ tek seferde</div>
+<div style="align-self: flex-start; padding: 6px 12px; border-radius: 999px; background: #E8F6F4; border: 2px solid #1F1F1F; font-size: 14px; font-weight: 900">900 ₺ kazançlı</div>
+<a href="abone-ol.html" style="margin-top: auto; height: 56px; display: flex; align-items: center; justify-content: center; border-radius: 16px; border: 2px solid #1F1F1F; color: #1F1F1F; font-weight: 900; text-decoration: none; background: #FFFFFF">Seç</a>
+</div>
+<div style="padding: 36px; border-radius: 24px; background: #FFC43D; border: 2px solid #1F1F1F; display: flex; flex-direction: column; gap: 14px; position: relative; color: #1F1F1F">
+<div style="position: absolute; top: -16px; right: 24px; padding: 6px 12px; border-radius: 999px; background: #1F1F1F; color: #FFFFFF; font-size: 13px; font-weight: 800">En avantajlı</div>
+<div style="font-size: 24px; font-weight: 900">12 aylık</div>
+<div style="display: flex; align-items: baseline; gap: 6px"><span style="font-size: 52px; font-weight: 900; line-height: 1">950</span><span style="font-size: 18px; font-weight: 800">₺ / ay</span></div>
+<div style="font-size: 16px; font-weight: 700">11.400 ₺ tek seferde · 12. durakta kutu oyunu + %20</div>
+<div style="align-self: flex-start; padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 2px solid #1F1F1F; font-size: 14px; font-weight: 900">3.000 ₺ kazançlı</div>
+<a href="abone-ol.html" style="margin-top: auto; height: 56px; display: flex; align-items: center; justify-content: center; border-radius: 16px; border: 2px solid #1F1F1F; color: #1F1F1F; font-weight: 900; text-decoration: none; background: #FFFFFF">Seç</a>
+</div>
+</div>
+<div style="padding: 28px 32px; border-radius: 24px; background: #E8F6F4; display: flex; justify-content: space-between; align-items: center">
+<div style="display: flex; gap: 20px; align-items: center">
+<img src="assets/hediye.png" alt="" style="width: 64px; height: auto">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 22px; font-weight: 900; color: #1F1F1F">Hediye abonelik</div>
+<div style="font-size: 16px">Yeğenine, torununa, arkadaşının çocuğuna 6 ya da 12 aylık kutu hediye et. Hediye kartı ilk kutuyla gelir.</div>
+</div>
+</div>
+<a href="abone-ol.html" style="height: 52px; padding: 0 24px; display: flex; align-items: center; border-radius: 16px; background: #FFFFFF; border: 2px solid #1F1F1F; color: #1F1F1F; font-weight: 900; text-decoration: none">Hediye et</a>
+</div>
+</section>
+
+<section style="padding: 96px 64px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px; background: #FFF4D6">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div style="font-size: 15px; font-weight: 900; letter-spacing: 2px; color: #137A70">MERAK EDİLENLER</div>
+<h2 style="margin: 0; font-size: 52px; line-height: 1.05; font-weight: 900; color: #1F1F1F">Aklına takılan bir şey mi var?</h2>
+<a href="sss.html" style="align-self: flex-start; margin-top: 12px; height: 52px; padding: 0 24px; display: flex; align-items: center; border-radius: 16px; background: #FFFFFF; border: 2px solid #1F1F1F; color: #1F1F1F; font-weight: 900; text-decoration: none">Tüm sorular</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="padding: 22px 24px; border-radius: 16px; background: #FFFFFF; border: 2px solid #1F1F1F; font-size: 18px; font-weight: 800; color: #1F1F1F">Kutular ne zaman kargoya verilir?</div>
+<div style="padding: 22px 24px; border-radius: 16px; background: #FFFFFF; border: 2px solid #1F1F1F; font-size: 18px; font-weight: 800; color: #1F1F1F">Aboneliğimi dondurabilir ya da bir ayı atlayabilir miyim?</div>
+<div style="padding: 22px 24px; border-radius: 16px; background: #FFFFFF; border: 2px solid #1F1F1F; font-size: 18px; font-weight: 800; color: #1F1F1F">Çocuğumda zaten olan bir kitap gelirse ne olur?</div>
+<div style="padding: 22px 24px; border-radius: 16px; background: #FFFFFF; border: 2px solid #1F1F1F; font-size: 18px; font-weight: 800; color: #1F1F1F">Yıl ortasında başlarsak harita nasıl işliyor?</div>
+</div>
+</section>
+
+<footer style="flex-grow: 1; padding: 72px 64px 48px; background: #1F1F1F; color: #FFFFFF; display: flex; flex-direction: column; gap: 48px">
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div style="padding: 14px 18px; border-radius: 16px; background: #FFFFFF; align-self: flex-start"><img src="assets/logo.png" alt="kitapoyun" style="height: 40px; width: auto; display: block"></div>
+<div style="font-size: 18px; font-weight: 800">Okudukça oyna, oynadıkça oku.</div>
+</div>
+<nav aria-label="Kutular" style="display: flex; flex-direction: column; gap: 12px; font-size: 16px">
+<div style="font-weight: 900; color: #FFC43D">Kitapoyun</div>
+<a href="#kutular" style="color: #FFFFFF">Yaş kutuları</a>
+<a href="ayin-kutusu.html" style="color: #FFFFFF">Ayın kutusu</a>
+<a href="#fiyatlar" style="color: #FFFFFF">Planlar ve fiyatlar</a>
+<a href="abone-ol.html" style="color: #FFFFFF">Hediye abonelik</a>
+</nav>
+<nav aria-label="Yardım" style="display: flex; flex-direction: column; gap: 12px; font-size: 16px">
+<div style="font-weight: 900; color: #FFC43D">Yardım</div>
+<a href="sss.html" style="color: #FFFFFF">Sıkça sorulan sorular</a>
+<a href="sss.html" style="color: #FFFFFF">Hakkımızda</a>
+<a href="sss.html" style="color: #FFFFFF">İletişim</a>
+<a href="giris.html" style="color: #FFFFFF">Üye girişi</a>
+</nav>
+<div style="display: flex; flex-direction: column; gap: 12px; font-size: 16px">
+<div style="font-weight: 900; color: #FFC43D">Bizi takip et</div>
+<a href="https://www.instagram.com/kitapoyuncom" style="color: #FFFFFF">Instagram · @kitapoyuncom</a>
+<div>[E-POSTA ADRESİ]</div>
+<div>[TELEFON]</div>
+</div>
+</div>
+<div style="padding-top: 24px; border-top: 1px solid #4F4F4F; display: flex; justify-content: space-between; font-size: 14px; color: #D9D9D9">
+<span>© 2026 kitapoyun · [ŞİRKET UNVANI]</span>
+<span style="display: flex; gap: 24px"><span>Mesafeli satış sözleşmesi</span><span>İptal ve iade koşulları</span><span>KVKK aydınlatma metni</span><span>Çerez politikası</span></span>
+</div>
+</footer>
+</div>
+</template>
+<script src="assets/runtime.js"></script>
+<script>
+class Component extends DCLogic {
+  renderVals() {
+    const pts = [];
+    for (let i = 0; i < 12; i++) {
+      pts.push({ x: 80 + i * 98, y: 190 + Math.round(95 * Math.sin(i * 1.05)) });
+    }
+    let d = 'M ' + pts[0].x + ' ' + pts[0].y;
+    for (let i = 1; i < pts.length; i++) {
+      const p = pts[i - 1], c = pts[i];
+      const mx = (p.x + c.x) / 2;
+      d += ' C ' + mx + ' ' + p.y + ' ' + mx + ' ' + c.y + ' ' + c.x + ' ' + c.y;
+    }
+    const fills = ['#FFC43D', '#1FA89B', '#FF6B5B', '#6BBF59', '#5B5BD6'];
+    const stops = pts.slice(0, 11).map((p, i) => {
+      const done = i < 5;
+      const base = 'position: absolute; left: ' + (p.x - 34) + 'px; top: ' + (p.y - 34) + 'px; width: 68px; height: 68px; border-radius: 34px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 900;';
+      const look = done
+        ? ' background: ' + fills[i] + '; border: 3px solid #1F1F1F; color: ' + (i === 4 ? '#FFFFFF' : '#1F1F1F') + ';'
+        : ' background: #FFFFFF; border: 3px dashed #4F4F4F; color: #4F4F4F;';
+      return { label: String(i + 1), style: base + look };
+    });
+    return { mapPath: d, stops: stops };
+  }
+}
+mountDC(Component);
+</script>
+</body>
+</html>

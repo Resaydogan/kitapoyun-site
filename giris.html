@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1440">
+<meta name="robots" content="noindex, nofollow">
+<title>kitapoyun · Giriş</title>
+<link rel="icon" href="assets/hediye.png">
+<style>
+body{margin:0;background:#FFFFFF;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#4F4F4F}
+a{color:#137A70}a:hover{color:#1F1F1F}
+input{font:inherit}
+</style>
+<style>#app{display:flex;justify-content:center}</style>
+</head>
+<body>
+<div style="position:sticky;top:0;z-index:50;background:#1F1F1F;color:#FFFFFF;font:700 15px/1.4 system-ui,-apple-system,'Segoe UI',sans-serif;text-align:center;padding:10px 16px">Bu, kitapoyun’un tanıtım ve test sürümüdür. Satış, ödeme ve üyelik henüz açık değil; formlara yazdıkların hiçbir yere gönderilmez.</div>
+<div id="app"></div>
+<template id="dc-template">
+
+<div style="width: 1440px; height: 960px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); background: #FFFFFF; font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; color: #4F4F4F">
+<div style="position: relative; overflow: hidden; background: #1FA89B; padding: 56px 64px; display: flex; flex-direction: column; justify-content: space-between; color: #1F1F1F">
+<a href="index.html" aria-label="kitapoyun ana sayfa" style="align-self: flex-start; padding: 14px 20px; border-radius: 20px; background: #FFFFFF; border: 2px solid #1F1F1F; display: flex"><img src="assets/logo.png" alt="kitapoyun" style="height: 48px; width: auto"></a>
+<img src="assets/hediye.png" alt="" style="position: absolute; right: 40px; top: 250px; width: 300px; height: auto">
+<div style="display: flex; flex-direction: column; gap: 16px; position: relative">
+<div style="font-size: 88px; font-weight: 900; line-height: 0.95; letter-spacing: -2px">Aç, oku,<br>oyna!</div>
+<div style="font-size: 22px; font-weight: 700; max-width: 460px; line-height: 1.45">Kâşifinin haritası, sıradaki kutusu ve kulüp buluşmaları seni bekliyor.</div>
+</div>
+</div>
+<div style="padding: 56px 120px; display: flex; flex-direction: column; justify-content: center; gap: 28px">
+<div role="tablist" aria-label="Giriş ya da kayıt" style="display: flex; gap: 8px; padding: 6px; border-radius: 20px; background: #FFF4D6; align-self: flex-start">
+<button type="button" role="tab" aria-selected="{{loginSel}}" onClick="{{toLogin}}" style="{{loginTab}}">Giriş yap</button>
+<button type="button" role="tab" aria-selected="{{signupSel}}" onClick="{{toSignup}}" style="{{signupTab}}">Kayıt ol</button>
+</div>
+
+<sc-if value="{{isLogin}}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; flex-direction: column; gap: 20px">
+<h1 style="margin: 0; font-size: 44px; font-weight: 900; color: #1F1F1F">Tekrar hoş geldin!</h1>
+<label style="display: flex; flex-direction: column; gap: 8px; font-weight: 800; color: #1F1F1F">E-posta<input type="email" placeholder="ornek@eposta.com" style="height: 56px; padding: 0 16px; border-radius: 12px; border: 2px solid #4F4F4F; font-size: 17px"></label>
+<label style="display: flex; flex-direction: column; gap: 8px; font-weight: 800; color: #1F1F1F">Şifre<input type="password" style="height: 56px; padding: 0 16px; border-radius: 12px; border: 2px solid #4F4F4F; font-size: 17px"></label>
+<div style="display: flex; justify-content: space-between; align-items: center">
+<label style="display: flex; gap: 10px; align-items: center; font-size: 16px"><input type="checkbox" style="width: 20px; height: 20px; margin: 0">Beni hatırla</label>
+<a href="giris.html" style="font-weight: 800">Şifremi unuttum</a>
+</div>
+<a href="panel.html" style="height: 60px; display: flex; align-items: center; justify-content: center; border-radius: 16px; background: #FFC43D; border: 2px solid #1F1F1F; color: #1F1F1F; font-size: 18px; font-weight: 900; text-decoration: none">Giriş yap</a>
+</div>
+</sc-if>
+
+<sc-if value="{{isSignup}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 20px">
+<h1 style="margin: 0; font-size: 44px; font-weight: 900; color: #1F1F1F">Kâşif ailesine katıl</h1>
+<label style="display: flex; flex-direction: column; gap: 8px; font-weight: 800; color: #1F1F1F">Ad soyad<input type="text" style="height: 56px; padding: 0 16px; border-radius: 12px; border: 2px solid #4F4F4F; font-size: 17px"></label>
+<label style="display: flex; flex-direction: column; gap: 8px; font-weight: 800; color: #1F1F1F">E-posta<input type="email" style="height: 56px; padding: 0 16px; border-radius: 12px; border: 2px solid #4F4F4F; font-size: 17px"></label>
+<label style="display: flex; flex-direction: column; gap: 8px; font-weight: 800; color: #1F1F1F">Şifre<input type="password" placeholder="En az 8 karakter" style="height: 56px; padding: 0 16px; border-radius: 12px; border: 2px solid #4F4F4F; font-size: 17px"></label>
+<label style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.45"><input type="checkbox" style="width: 20px; height: 20px; margin: 0; flex-shrink: 0">Kampanya ve yeni kutu duyurularını e-posta ile almak istiyorum.</label>
+<a href="abone-ol.html" style="height: 60px; display: flex; align-items: center; justify-content: center; border-radius: 16px; background: #FFC43D; border: 2px solid #1F1F1F; color: #1F1F1F; font-size: 18px; font-weight: 900; text-decoration: none">Hesap oluştur ve kutunu seç</a>
+</div>
+</sc-if>
+
+<div style="display: flex; align-items: center; gap: 16px; font-size: 15px"><span style="flex-grow: 1; height: 2px; background: #F0E9D8"></span>ya da<span style="flex-grow: 1; height: 2px; background: #F0E9D8"></span></div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
+<button type="button" style="height: 56px; border-radius: 16px; border: 2px solid #4F4F4F; background: #FFFFFF; color: #1F1F1F; font: inherit; font-weight: 800; font-size: 16px; cursor: pointer">Google ile devam et</button>
+<button type="button" style="height: 56px; border-radius: 16px; border: 2px solid #4F4F4F; background: #FFFFFF; color: #1F1F1F; font: inherit; font-weight: 800; font-size: 16px; cursor: pointer">Apple ile devam et</button>
+</div>
+</div>
+</div>
+</template>
+<script src="assets/runtime.js"></script>
+<script>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { mode: 'login' }; }
+  renderVals() {
+    const login = this.state.mode === 'login';
+    const tab = (on) => 'height: 48px; padding: 0 22px; border-radius: 14px; font: inherit; font-size: 16px; font-weight: 900; cursor: pointer; color: #1F1F1F; background: ' + (on ? '#FFFFFF' : 'transparent') + '; border: ' + (on ? '2px solid #1F1F1F' : '2px solid transparent') + ';';
+    return {
+      isLogin: login, isSignup: !login,
+      loginSel: login ? 'true' : 'false', signupSel: login ? 'false' : 'true',
+      loginTab: tab(login), signupTab: tab(!login),
+      toLogin: () => this.setState({ mode: 'login' }),
+      toSignup: () => this.setState({ mode: 'signup' })
+    };
+  }
+}
+mountDC(Component);
+</script>
+</body>
+</html>

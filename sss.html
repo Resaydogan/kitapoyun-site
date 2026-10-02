@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1440">
+<meta name="robots" content="noindex, nofollow">
+<title>kitapoyun · SSS ve iletişim</title>
+<link rel="icon" href="assets/hediye.png">
+<style>
+body{margin:0;background:#FFFFFF;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#4F4F4F}
+a{color:#137A70}a:hover{color:#1F1F1F}
+input,select,textarea{font:inherit}
+</style>
+<style>#app{display:flex;justify-content:center}</style>
+</head>
+<body>
+<div style="position:sticky;top:0;z-index:50;background:#1F1F1F;color:#FFFFFF;font:700 15px/1.4 system-ui,-apple-system,'Segoe UI',sans-serif;text-align:center;padding:10px 16px">Bu, kitapoyun’un tanıtım ve test sürümüdür. Satış, ödeme ve üyelik henüz açık değil; formlara yazdıkların hiçbir yere gönderilmez.</div>
+<div id="app"></div>
+<template id="dc-template">
+
+<div style="width: 1440px; height: 2500px; display: flex; flex-direction: column; background: #FFFFFF; font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; color: #4F4F4F">
+
+<header style="height: 96px; flex-shrink: 0; box-sizing: border-box; padding: 0 64px; display: flex; align-items: center; justify-content: space-between; background: #FFFFFF; border-bottom: 1px solid #F0E9D8">
+<a href="index.html" aria-label="kitapoyun ana sayfa" style="display: flex"><img src="assets/logo.png" alt="kitapoyun" style="height: 52px; width: auto"></a>
+<nav aria-label="Ana menü" style="display: flex; gap: 32px; font-size: 16px; font-weight: 700">
+<a href="index.html" style="color: #4F4F4F; text-decoration: none">Kutular</a>
+<a href="ayin-kutusu.html" style="color: #4F4F4F; text-decoration: none">Ayın kutusu</a>
+<a href="index.html" style="color: #4F4F4F; text-decoration: none">Nasıl çalışır?</a>
+<a href="index.html" style="color: #4F4F4F; text-decoration: none">Kâşif haritası</a>
+<a href="index.html" style="color: #4F4F4F; text-decoration: none">Kulüp</a>
+<a href="sss.html" style="color: #137A70; text-decoration: none">SSS</a>
+</nav>
+<div style="display: flex; gap: 12px; align-items: center">
+<a href="giris.html" style="height: 48px; padding: 0 22px; display: flex; align-items: center; border-radius: 16px; border: 2px solid #4F4F4F; color: #4F4F4F; font-weight: 800; text-decoration: none">Giriş yap</a>
+<a href="abone-ol.html" style="height: 48px; padding: 0 24px; display: flex; align-items: center; border-radius: 16px; background: #FFC43D; color: #1F1F1F; font-weight: 800; text-decoration: none; border: 2px solid #1F1F1F">Abone ol</a>
+</div>
+</header>
+
+<section style="padding: 72px 64px; display: grid; grid-template-columns: 380px minmax(0, 1fr); gap: 64px; background: #FFF4D6">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div style="font-size: 15px; font-weight: 900; letter-spacing: 2px; color: #137A70">SIKÇA SORULAN SORULAR</div>
+<h1 style="margin: 0; font-size: 56px; line-height: 1.02; font-weight: 900; color: #1F1F1F">Merak ettiklerin</h1>
+<p style="margin: 0; font-size: 18px; line-height: 1.55">Cevabını bulamadığın bir şey olursa aşağıdaki formdan bize yazabilirsin.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<sc-for list="{{faq}}" as="q" hint-placeholder-count="10">
+<div style="border-radius: 16px; background: #FFFFFF; border: 2px solid #1F1F1F; overflow: hidden">
+<button type="button" onClick="{{q.toggle}}" aria-expanded="{{q.expanded}}" style="width: 100%; min-height: 64px; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; gap: 16px; background: #FFFFFF; border: 0; font: inherit; font-size: 18px; font-weight: 800; color: #1F1F1F; text-align: left; cursor: pointer">{{q.q}}<span style="font-size: 26px; font-weight: 900; flex-shrink: 0">{{q.sign}}</span></button>
+<sc-if value="{{q.open}}" hint-placeholder-val="{{ false }}">
+<div style="padding: 0 24px 20px; font-size: 17px; line-height: 1.6">{{q.a}}</div>
+</sc-if>
+</div>
+</sc-for>
+</div>
+</section>
+
+<section id="hakkimizda" style="padding: 80px 64px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px; align-items: center">
+<div style="display: flex; flex-direction: column; gap: 18px">
+<div style="font-size: 15px; font-weight: 900; letter-spacing: 2px; color: #137A70">HAKKIMIZDA</div>
+<h2 style="margin: 0; font-size: 48px; line-height: 1.05; font-weight: 900; color: #1F1F1F">Kitapoyun bir yazarın masasında doğdu</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.65">Kitapoyun, etkileşimli çocuk kitapları yazan ve yıllardır okul öncesi eğitimle iç içe çalışan Resul [SOYAD] tarafından kuruldu. Çocukların kitapla en iyi oyun oynarken buluştuğuna inanıyoruz: okunan her sayfanın bir oyuna, her oyunun da yeni bir sayfaya kapı açtığı bir kutu hayal ettik.</p>
+<p style="margin: 0; font-size: 18px; line-height: 1.65">Kutulardaki kitapları çocuk edebiyatına emek veren yazar dostlarımızla birlikte seçiyor, etkinlik sayfalarını eğitimcilerle hazırlıyoruz.</p>
+</div>
+<div style="height: 420px; border-radius: 24px; background: #E8F6F4; border: 2px dashed #1F1F1F; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 800; color: #1F1F1F">[KURUCU FOTOĞRAFI]</div>
+</section>
+
+<section id="iletisim" style="padding: 80px 64px; display: grid; grid-template-columns: 420px minmax(0, 1fr); gap: 64px; background: #E8F6F4">
+<div style="display: flex; flex-direction: column; gap: 18px">
+<div style="font-size: 15px; font-weight: 900; letter-spacing: 2px; color: #137A70">İLETİŞİM</div>
+<h2 style="margin: 0; font-size: 48px; line-height: 1.05; font-weight: 900; color: #1F1F1F">Bize yaz</h2>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 17px">
+<span><strong style="color: #1F1F1F">E-posta:</strong> [E-POSTA ADRESİ]</span>
+<span><strong style="color: #1F1F1F">Telefon:</strong> [TELEFON]</span>
+<span><strong style="color: #1F1F1F">Instagram:</strong> <a href="https://www.instagram.com/kitapoyuncom">@kitapoyuncom</a></span>
+<span><strong style="color: #1F1F1F">Çalışma saatleri:</strong> [SAATLER]</span>
+</div>
+</div>
+<form style="padding: 40px; border-radius: 24px; background: #FFFFFF; border: 2px solid #1F1F1F; display: flex; flex-direction: column; gap: 18px">
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
+<label style="display: flex; flex-direction: column; gap: 8px; font-weight: 800; color: #1F1F1F">Ad soyad<input type="text" style="height: 52px; padding: 0 16px; border-radius: 12px; border: 2px solid #4F4F4F; font-size: 16px"></label>
+<label style="display: flex; flex-direction: column; gap: 8px; font-weight: 800; color: #1F1F1F">E-posta<input type="email" style="height: 52px; padding: 0 16px; border-radius: 12px; border: 2px solid #4F4F4F; font-size: 16px"></label>
+</div>
+<label style="display: flex; flex-direction: column; gap: 8px; font-weight: 800; color: #1F1F1F">Konu<select style="height: 52px; padding: 0 12px; border-radius: 12px; border: 2px solid #4F4F4F; font-size: 16px; background: #FFFFFF"><option>Aboneliğim</option><option>Kargo ve teslimat</option><option>Kitap değişimi</option><option>Hediye abonelik</option><option>Yazar ve yayınevi iş birliği</option><option>Diğer</option></select></label>
+<label style="display: flex; flex-direction: column; gap: 8px; font-weight: 800; color: #1F1F1F">Mesajın<textarea rows="5" style="padding: 14px 16px; border-radius: 12px; border: 2px solid #4F4F4F; font-size: 16px; resize: none"></textarea></label>
+<button type="button" style="align-self: flex-start; height: 56px; padding: 0 32px; border-radius: 16px; border: 2px solid #1F1F1F; background: #FFC43D; color: #1F1F1F; font: inherit; font-size: 17px; font-weight: 900; cursor: pointer">Gönder</button>
+</form>
+</section>
+
+<footer style="flex-grow: 1; padding: 48px 64px; background: #1F1F1F; color: #FFFFFF; display: flex; justify-content: space-between; align-items: flex-start; font-size: 15px">
+<span style="font-weight: 800">kitapoyun · Okudukça oyna, oynadıkça oku.</span>
+<span style="display: flex; gap: 24px"><span>Mesafeli satış sözleşmesi</span><span>İptal ve iade koşulları</span><span>KVKK aydınlatma metni</span></span>
+</footer>
+</div>
+</template>
+<script src="assets/runtime.js"></script>
+<script>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { open: 0 }; }
+  renderVals() {
+    const items = [
+      ['Kutular ne zaman kargoya verilir?', 'Kutular her ayın ilk [X] günü içinde ücretsiz kargoyla yola çıkar. Kargo takip numarası e-posta ile gönderilir ve üye panelinde görünür.'],
+      ['Aboneliğimi dondurabilir ya da bir ayı atlayabilir miyim?', 'Evet. Üye panelinden her ayın [X]\'ine kadar o ayı atlayabilir ya da aboneliğini istediğin kadar dondurabilirsin.'],
+      ['Çocuğumda zaten olan bir kitap gelirse ne olur?', 'Her ayın iki kitabını önceden duyuruyoruz. Evde varsa o ayı atlayabilirsin. Panelde evdeki kitaplar listeni tutarsan seçkiyi hazırlarken dikkate alırız. Değişim koşulları: [KOŞUL].'],
+      ['Yıl ortasında başlarsak harita nasıl işliyor?', 'Haritadaki duraklar ay isimleriyle değil numarayla ilerler. Hangi ay başlarsan başla, ilk kutundaki kâşif 1. durağa yapıştırılır.'],
+      ['Bir kâşif sticker\'ını kaçırırsak?', 'Atladığın ya da kaybettiğin kâşifleri üye panelinden ayrıca sipariş edebilirsin.'],
+      ['12 ayı tamamlayınca ne oluyor?', '12. durağı tamamlayan her kâşife iki ödül veriyoruz: yaş grubuna uygun 1 kutu oyunu ve bir sonraki yılın aboneliğinde %20 indirim. Tamamlanmış haritanın fotoğrafını üye panelinden yüklemen yeterli; kutu oyunu kargoya çıkar, indirim hesabına tanımlanır.'],
+      ['Oyuncaklar güvenli mi?', 'Tüm oyuncaklar CE işaretli ve yaş grubuna uygun seçilir. 3-5 yaş kutusunda küçük parçalı oyuncak bulunmaz.'],
+      ['Kulüp buluşmaları nasıl oluyor?', 'Ayda bir, abonelerimize ücretsiz online buluşmalar düzenliyoruz. Kutudaki kitapların yazarları katılıyor. Bağlantı üye paneline ve e-postana gelir.'],
+      ['Hediye abonelik nasıl çalışır?', '6 aylık (6.300 ₺) ya da 12 aylık (11.400 ₺) hediye abonelik alabilirsin. İlk kutuyla birlikte hediye kartı gönderilir; istersen fiyat bilgisi kutuda yer almaz.'],
+      ['Aboneliğimi nasıl iptal ederim?', 'Üye panelindeki Abonelik bölümünden istediğin zaman iptal edebilirsin. Peşin planlarda iade koşulları: [KOŞUL].'],
+      ['Fiyatlar ne kadar?', 'Aylık plan 1.200 ₺. 6 aylık plan 6.300 ₺ (aylık 1.050 ₺), 12 aylık plan 11.400 ₺ (aylık 950 ₺). Tüm planlarda kargo ücretsiz.']
+    ];
+    const faq = items.map((it, i) => {
+      const open = this.state.open === i;
+      return { q: it[0], a: it[1], open: open, expanded: open ? 'true' : 'false', sign: open ? '−' : '+',
+        toggle: () => this.setState({ open: open ? -1 : i }) };
+    });
+    return { faq };
+  }
+}
+mountDC(Component);
+</script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1440">
+<meta name="robots" content="noindex, nofollow">
+<title>kitapoyun · Üye paneli</title>
+<link rel="icon" href="assets/hediye.png">
+<style>
+body{margin:0;background:#FFFFFF;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#4F4F4F}
+a{color:#137A70}a:hover{color:#1F1F1F}
+</style>
+<style>#app{display:flex;justify-content:center}</style>
+</head>
+<body>
+<div style="position:sticky;top:0;z-index:50;background:#1F1F1F;color:#FFFFFF;font:700 15px/1.4 system-ui,-apple-system,'Segoe UI',sans-serif;text-align:center;padding:10px 16px">Bu, kitapoyun’un tanıtım ve test sürümüdür. Satış, ödeme ve üyelik henüz açık değil; formlara yazdıkların hiçbir yere gönderilmez.</div>
+<div id="app"></div>
+<template id="dc-template">
+
+<div style="width: 1440px; height: 2080px; display: grid; grid-template-columns: 280px minmax(0, 1fr); background: #FFF4D6; font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; color: #4F4F4F">
+<aside style="background: #FFFFFF; border-right: 2px solid #F0E9D8; padding: 32px 24px; display: flex; flex-direction: column; gap: 32px">
+<a href="index.html" aria-label="kitapoyun ana sayfa" style="display: flex"><img src="assets/logo.png" alt="kitapoyun" style="width: 180px; height: auto"></a>
+<nav aria-label="Panel" style="display: flex; flex-direction: column; gap: 6px; font-size: 16px; font-weight: 800">
+<a href="#genel" style="padding: 14px 16px; border-radius: 14px; background: #FFC43D; color: #1F1F1F; text-decoration: none; border: 2px solid #1F1F1F">Genel bakış</a>
+<a href="#harita" style="padding: 14px 16px; border-radius: 14px; color: #4F4F4F; text-decoration: none">Kâşif haritam</a>
+<a href="mektup.html" style="padding: 14px 16px; border-radius: 14px; color: #4F4F4F; text-decoration: none">Mektup kutusu</a>
+<a href="#kutular" style="padding: 14px 16px; border-radius: 14px; color: #4F4F4F; text-decoration: none">Kutularım</a>
+<a href="#abonelik" style="padding: 14px 16px; border-radius: 14px; color: #4F4F4F; text-decoration: none">Abonelik</a>
+<a href="#kulup" style="padding: 14px 16px; border-radius: 14px; color: #4F4F4F; text-decoration: none">Kulüp buluşmaları</a>
+<a href="#hesap" style="padding: 14px 16px; border-radius: 14px; color: #4F4F4F; text-decoration: none">Hesap ve adres</a>
+</nav>
+<div style="margin-top: auto; display: flex; flex-direction: column; gap: 12px; font-size: 15px">
+<a href="sss.html" style="font-weight: 800">Yardım ve SSS</a>
+<a href="index.html" style="font-weight: 800; color: #4F4F4F">Çıkış yap</a>
+</div>
+</aside>
+
+<main style="padding: 48px 56px; display: flex; flex-direction: column; gap: 28px">
+<div id="genel" style="display: flex; justify-content: space-between; align-items: flex-end">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<div style="font-size: 16px; font-weight: 700">Merhaba [EBEVEYN ADI]</div>
+<h1 style="margin: 0; font-size: 48px; font-weight: 900; color: #1F1F1F">[ÇOCUĞUN ADI]'in kâşif paneli</h1>
+</div>
+<a href="abone-ol.html" style="height: 52px; padding: 0 22px; display: flex; align-items: center; border-radius: 16px; background: #FFFFFF; border: 2px solid #1F1F1F; color: #1F1F1F; font-weight: 900; text-decoration: none">Kardeş kutusu ekle</a>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px">
+<div style="grid-column: span 2; padding: 32px; border-radius: 24px; background: #6BBF59; border: 2px solid #1F1F1F; display: flex; justify-content: space-between; gap: 24px; color: #1F1F1F">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<div style="font-size: 14px; font-weight: 900; letter-spacing: 1.5px">SIRADAKİ KUTU</div>
+<div style="font-size: 34px; font-weight: 900">[AY] kutusu · 6–8 yaş</div>
+<div style="font-size: 17px; font-weight: 700">[TARİH] tarihinde kargoda. Takip numarası kargoya verildiğinde burada.</div>
+<div style="font-size: 17px; font-weight: 700">Duyurulan kitaplar: Robotlar da Çorap Giyer · [KİTAP 2]</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; flex-shrink: 0">
+<button type="button" style="height: 48px; padding: 0 20px; border-radius: 14px; border: 2px solid #1F1F1F; background: #FFFFFF; color: #1F1F1F; font: inherit; font-weight: 900; cursor: pointer">Bu ayı atla</button>
+<a href="ayin-kutusu.html" style="height: 48px; padding: 0 20px; display: flex; align-items: center; justify-content: center; border-radius: 14px; border: 2px solid #1F1F1F; background: #FFFFFF; color: #1F1F1F; font-weight: 900; text-decoration: none">Kutuyu gör</a>
+</div>
+</div>
+<div id="kulup" style="padding: 32px; border-radius: 24px; background: #FFFFFF; border: 2px solid #1F1F1F; display: flex; flex-direction: column; gap: 10px">
+<div style="font-size: 14px; font-weight: 900; letter-spacing: 1.5px; color: #137A70">KULÜP BULUŞMASI</div>
+<div style="font-size: 22px; font-weight: 900; color: #1F1F1F">Resul [SOYAD] ile robotlar</div>
+<div style="font-size: 16px">[TARİH] · [SAAT] · Online</div>
+<button type="button" style="margin-top: auto; height: 48px; border-radius: 14px; border: 2px solid #1F1F1F; background: #FFC43D; color: #1F1F1F; font: inherit; font-weight: 900; cursor: pointer">Takvimime ekle</button>
+</div>
+</div>
+
+<section id="harita" style="padding: 32px; border-radius: 24px; background: #FFFFFF; border: 2px solid #1F1F1F; display: flex; flex-direction: column; gap: 24px">
+<div style="display: flex; justify-content: space-between; align-items: center">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<div style="font-size: 14px; font-weight: 900; letter-spacing: 1.5px; color: #137A70">KÂŞİF HARİTAM · 1. SEZON</div>
+<div style="font-size: 30px; font-weight: 900; color: #1F1F1F">5 / 12 durak tamamlandı</div>
+</div>
+<button type="button" style="height: 48px; padding: 0 20px; border-radius: 14px; border: 2px solid #1F1F1F; background: #FFFFFF; color: #1F1F1F; font: inherit; font-weight: 900; cursor: pointer">Eksik kâşif sipariş et</button>
+</div>
+<div style="height: 16px; border-radius: 8px; background: #F0E9D8; border: 2px solid #1F1F1F; overflow: hidden"><div style="width: 41.6%; height: 100%; background: #1FA89B"></div></div>
+<div style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 12px">
+<sc-for list="{{stops}}" as="s" hint-placeholder-count="12">
+<div style="display: flex; flex-direction: column; align-items: center; gap: 8px">
+<div style="{{s.style}}">{{s.n}}</div>
+<div style="font-size: 13px; font-weight: 700; text-align: center">{{s.label}}</div>
+</div>
+</sc-for>
+</div>
+<div style="padding: 28px; border-radius: 20px; background: #FFC43D; border: 3px solid #1F1F1F; display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 24px">
+<div style="display: flex; gap: 16px; align-items: center">
+<img src="assets/hediye.png" alt="" style="width: 64px; height: auto">
+<div style="display: flex; flex-direction: column; gap: 4px; color: #1F1F1F"><div style="font-size: 14px; font-weight: 900; letter-spacing: 1.5px">12. DURAĞIN ÖDÜLLERİ</div><div style="font-size: 26px; font-weight: 900">Ödüllerine 7 durak kaldı!</div></div>
+</div>
+<button type="button" disabled style="height: 48px; padding: 0 20px; border-radius: 14px; border: 2px dashed #1F1F1F; background: #FFFFFF; color: #1F1F1F; font: inherit; font-weight: 800; flex-shrink: 0">Harita fotoğrafını yükle (12. durakta açılır)</button>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
+<div style="padding: 20px; border-radius: 16px; background: #FFFFFF; border: 2px solid #1F1F1F; display: flex; gap: 16px; align-items: center">
+<svg width="56" height="56" viewBox="0 0 48 48" fill="none" stroke="#1F1F1F" stroke-width="2.5" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><rect x="4" y="12" width="40" height="30" rx="4" fill="#1FA89B"></rect><path d="M4 20h40" stroke-linecap="round"></path><rect x="14" y="4" width="20" height="10" rx="3" fill="#FFFFFF"></rect><rect x="12" y="25" width="10" height="10" rx="2.5" fill="#FFFFFF"></rect><rect x="26" y="25" width="10" height="10" rx="2.5" fill="#FF6B5B"></rect></svg>
+<div style="display: flex; flex-direction: column; gap: 4px"><strong style="font-size: 20px; color: #1F1F1F">1 kutu oyunu</strong><span style="font-size: 15px; line-height: 1.45">Fotoğrafı yükleyince 6–8 yaşa uygun kutu oyunun kargoya çıkar.</span></div>
+</div>
+<div style="padding: 20px; border-radius: 16px; background: #FFFFFF; border: 2px solid #1F1F1F; display: flex; gap: 16px; align-items: center">
+<div style="width: 56px; height: 56px; flex-shrink: 0; border-radius: 28px; background: #1FA89B; border: 2px solid #1F1F1F; display: flex; align-items: center; justify-content: center; font-size: 19px; font-weight: 900; color: #1F1F1F">%20</div>
+<div style="display: flex; flex-direction: column; gap: 4px"><strong style="font-size: 20px; color: #1F1F1F">Yeni yılda %20 indirim</strong><span style="font-size: 15px; line-height: 1.45">Bir sonraki yılın aboneliğine otomatik tanımlanır.</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="mektup" style="padding: 32px; border-radius: 24px; background: #FFFFFF; border: 2px solid #1F1F1F; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<div style="font-size: 14px; font-weight: 900; letter-spacing: 1.5px; color: #137A70">MEKTUP ARKADAŞIM</div>
+<div style="font-size: 28px; font-weight: 900; color: #1F1F1F">Deniz'den 1 yeni mektup var</div>
+<div style="font-size: 16px; line-height: 1.5">Kâşif numaran: <strong style="color: #1F1F1F">KP-6-0427</strong> · Mektup arkadaşın: Deniz (KP-6-1183)</div>
+<a href="mektup.html" style="align-self: flex-start; margin-top: auto; height: 52px; padding: 0 24px; display: flex; align-items: center; border-radius: 16px; background: #FFC43D; border: 2px solid #1F1F1F; color: #1F1F1F; font-weight: 900; text-decoration: none">Mektup kutusunu aç</a>
+</div>
+<div style="padding: 24px; border-radius: 20px; background: #E8F6F4; display: flex; flex-direction: column; gap: 12px">
+<div style="font-size: 17px; font-weight: 900; color: #1F1F1F">Veli kontrolleri</div>
+<label style="display: flex; gap: 12px; align-items: center; font-size: 16px; color: #1F1F1F"><input type="checkbox" checked style="width: 22px; height: 22px; margin: 0">Çocuğum mektup arkadaşı olabilir</label>
+<label style="display: flex; gap: 12px; align-items: center; font-size: 16px; color: #1F1F1F"><input type="checkbox" checked style="width: 22px; height: 22px; margin: 0">Yeni gelen mektupları e-postama da gönder</label>
+<div style="font-size: 15px; line-height: 1.5; color: #1F1F1F">Onay kodu gelecek telefon: 05** *** ** 42 · <a href="#hesap" style="font-weight: 800">Değiştir</a></div>
+<div style="font-size: 14px; line-height: 1.5; color: #1F1F1F">Tüm mektuplar ekibimiz tarafından okunduktan sonra iletilir. Bir sorun görürseniz mektubun altındaki "Bildir" düğmesini kullanın.</div>
+</div>
+</section>
+
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px">
+<section id="abonelik" style="padding: 32px; border-radius: 24px; background: #FFFFFF; border: 2px solid #1F1F1F; display: flex; flex-direction: column; gap: 16px">
+<div style="font-size: 14px; font-weight: 900; letter-spacing: 1.5px; color: #137A70">ABONELİK</div>
+<div style="display: flex; justify-content: space-between; font-size: 17px"><span>Plan</span><strong style="color: #1F1F1F">12 aylık · 6–8 yaş · 11.400 ₺</strong></div>
+<div style="display: flex; justify-content: space-between; font-size: 17px"><span>Başlangıç</span><strong style="color: #1F1F1F">[TARİH]</strong></div>
+<div style="display: flex; justify-content: space-between; font-size: 17px"><span>Yenileme</span><strong style="color: #1F1F1F">[TARİH]</strong></div>
+<div style="display: flex; justify-content: space-between; font-size: 17px"><span>Ödeme</span><strong style="color: #1F1F1F">Kart · son 4 hane [XXXX]</strong></div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 8px">
+<button type="button" style="height: 48px; border-radius: 14px; border: 2px solid #1F1F1F; background: #FFFFFF; color: #1F1F1F; font: inherit; font-weight: 900; cursor: pointer">Planı değiştir</button>
+<button type="button" style="height: 48px; border-radius: 14px; border: 2px solid #1F1F1F; background: #FFFFFF; color: #1F1F1F; font: inherit; font-weight: 900; cursor: pointer">Aboneliği dondur</button>
+<button type="button" style="height: 48px; border-radius: 14px; border: 2px solid #1F1F1F; background: #FFFFFF; color: #1F1F1F; font: inherit; font-weight: 900; cursor: pointer">Yaş kutusunu değiştir</button>
+<button type="button" style="height: 48px; border-radius: 14px; border: 2px solid #1F1F1F; background: #FFFFFF; color: #1F1F1F; font: inherit; font-weight: 900; cursor: pointer">Ödeme yöntemi</button>
+</div>
+<a href="sss.html" style="font-size: 15px; font-weight: 800; color: #4F4F4F">Aboneliği iptal et</a>
+</section>
+<section id="kutular" style="padding: 32px; border-radius: 24px; background: #FFFFFF; border: 2px solid #1F1F1F; display: flex; flex-direction: column; gap: 14px">
+<div style="font-size: 14px; font-weight: 900; letter-spacing: 1.5px; color: #137A70">GEÇMİŞ KUTULAR</div>
+<sc-for list="{{past}}" as="p" hint-placeholder-count="5">
+<div style="display: flex; justify-content: space-between; align-items: center; padding: 14px 0; border-bottom: 2px solid #F0E9D8; font-size: 16px">
+<div style="display: flex; flex-direction: column; gap: 4px"><strong style="color: #1F1F1F">{{p.month}}</strong><span>{{p.books}}</span></div>
+<span style="padding: 6px 12px; border-radius: 999px; background: #E8F6F4; color: #1F1F1F; font-size: 14px; font-weight: 800">Teslim edildi</span>
+</div>
+</sc-for>
+</section>
+</div>
+
+<section id="hesap" style="padding: 32px; border-radius: 24px; background: #FFFFFF; border: 2px solid #1F1F1F; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 8px"><div style="font-size: 14px; font-weight: 900; letter-spacing: 1.5px; color: #137A70">KÂŞİF</div><strong style="font-size: 18px; color: #1F1F1F">[ÇOCUĞUN ADI]</strong><span>Doğum: [AY YIL]</span><a href="#hesap" style="font-weight: 800">Düzenle</a></div>
+<div style="display: flex; flex-direction: column; gap: 8px"><div style="font-size: 14px; font-weight: 900; letter-spacing: 1.5px; color: #137A70">TESLİMAT ADRESİ</div><span style="line-height: 1.5">[ADRES]</span><a href="#hesap" style="font-weight: 800">Adresi değiştir</a></div>
+<div style="display: flex; flex-direction: column; gap: 8px"><div style="font-size: 14px; font-weight: 900; letter-spacing: 1.5px; color: #137A70">EVDEKİ KİTAPLAR</div><span style="line-height: 1.5">Tekrar gelmemesini istediğin kitapları buraya ekle.</span><a href="#hesap" style="font-weight: 800">Listeyi düzenle</a></div>
+</section>
+</main>
+</div>
+</template>
+<script src="assets/runtime.js"></script>
+<script>
+class Component extends DCLogic {
+  renderVals() {
+    const fills = ['#FFC43D', '#1FA89B', '#FF6B5B', '#6BBF59', '#5B5BD6'];
+    const stops = [];
+    for (let i = 0; i < 12; i++) {
+      const done = i < 5, last = i === 11;
+      stops.push({
+        n: last ? '★' : String(i + 1),
+        label: done ? '[KÂŞİF ' + (i + 1) + ']' : (last ? 'Oyun + %20' : 'Bekliyor'),
+        style: 'width: 72px; height: 72px; border-radius: 36px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 900; ' +
+          (done ? 'background: ' + fills[i] + '; border: 3px solid #1F1F1F; color: ' + (i === 4 ? '#FFFFFF' : '#1F1F1F') + ';'
+                : (last ? 'background: #FFF4D6; border: 3px dashed #1F1F1F; color: #1F1F1F;' : 'background: #FFFFFF; border: 3px dashed #4F4F4F; color: #4F4F4F;'))
+      });
+    }
+    const past = [
+      { month: '[AY] kutusu', books: '[KİTAP] · [KİTAP] · sürpriz: [KİTAP]' },
+      { month: '[AY] kutusu', books: '[KİTAP] · [KİTAP] · sürpriz: [KİTAP]' },
+      { month: '[AY] kutusu', books: '[KİTAP] · [KİTAP] · sürpriz: [KİTAP]' },
+      { month: '[AY] kutusu', books: '[KİTAP] · [KİTAP] · sürpriz: [KİTAP]' }
+    ];
+    return { stops, past };
+  }
+}
+mountDC(Component);
+</script>
+</body>
+</html>
